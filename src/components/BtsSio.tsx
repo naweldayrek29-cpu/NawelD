@@ -40,20 +40,6 @@ const BtsSio = () => {
   const current = options[activeOption];
   const Icon = current.icon;
 
-  const parcoursText: Record<'sisr' | 'slam', string> = {
-    sisr:
-      `Actuellement en 2e année de BTS SIO (option SISR), je me spécialise en administration des systèmes et réseaux.
-       Durant ma formation, j’ai consolidé des compétences à la fois en cours et en alternance, telles que la gestion
-       d’infrastructures Windows/Linux, les services réseau (AD, DNS, DHCP), la sécurité et le contrôle d’accès,
-       la virtualisation et le support aux utilisateurs.`,
-
-    slam:
-      `Actuellement en 2e année de BTS SIO (option SLAM), je me spécialise en conception et développement d’applications.
-       J’ai renforcé mes acquis en front-end (React/Angular), back-end (Node/Java/C#), bases de données et APIs REST,
-       avec un focus sur la qualité logicielle (tests, revues), l’intégration continue et le déploiement (CI/CD,
-       conteneurisation).`
-  };
-
   return (
     <section id="bts-sio" className="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
       <div className="container mx-auto px-6">
@@ -125,12 +111,15 @@ const BtsSio = () => {
           </div>
         </div>
 
-        {/* Mon Parcours (dynamique selon l’option) */}
+        {/* Mon Parcours — TOUJOURS FIXE (SISR) */}
         <div className="mt-16 text-center bg-gradient-to-r from-purple-600/10 to-purple-800/10 border border-purple-500/20 rounded-xl p-8">
           <Shield className="text-purple-400 mx-auto mb-4" size={48} />
           <h3 className="text-2xl font-bold text-white mb-4">Mon Parcours</h3>
-          <p className="text-gray-300 max-w-2xl mx-auto">
-            {parcoursText[activeOption]}
+          <p className="text-gray-300 max-w-3xl mx-auto">
+            Actuellement en 2<sup>e</sup> année de <span className="text-white font-semibold">BTS SIO (option SISR)</span>,
+            je me spécialise en administration des systèmes et réseaux. Je maîtrise l’installation, la configuration et la
+            sécurisation des serveurs (Linux/Windows), la virtualisation, les réseaux (LAN, VLAN, routage), ainsi que la
+            supervision (<span className="font-semibold">Zabbix</span>).
           </p>
         </div>
       </div>

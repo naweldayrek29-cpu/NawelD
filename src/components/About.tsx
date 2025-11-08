@@ -12,17 +12,17 @@ const About = () => {
       color: "from-purple-600 to-purple-700"
     },
     {
-      year: "2023-2024", 
+      year: "2023-2024",
       title: "BTS SIO - 1ère année",
-      subtitle: "Découverte des fondamentaux informatiques",
+      subtitle: "Formation en alternance - Découverte des fondamentaux informatiques",
       description: "Apprentissage des bases en informatique, réseaux et développement",
       icon: Code,
       color: "from-blue-600 to-blue-700"
     },
     {
       year: "2023",
-      title: "DUT Informatique",
-      subtitle: "Formation universitaire technologique",
+      title: "BUT Informatique - 1 ère année ",
+      subtitle: "Bachelor universitaire technologique",
       description: "Acquisition des compétences de base en informatique et programmation",
       icon: Brain,
       color: "from-green-600 to-green-700"
@@ -38,15 +38,18 @@ const About = () => {
   ];
 
   const competencesTechniques = [
-    "Administration Windows Server / Linux",
-    "Configuration et maintenance réseaux",
-    "Supervision systèmes (PRTG, SNMP)",
-    "Gestion Active Directory",
-    "Développement web (HTML, CSS, JS, PHP)",
-    "Base de données (MySQL, SQL Server)",
-    "Virtualisation (VMware, Hyper-V)",
-    "Sécurité informatique et pare-feu"
-  ];
+  "Administration Windows Server / Linux",
+  "Configuration et maintenance réseaux",
+  "Supervision systèmes (PRTG, SNMP, Zabbix)",
+  "Gestion Active Directory",
+  "Virtualisation (VMware, Hyper-V)",
+  "Sécurité informatique et pare-feu",
+  "Gestion de tickets (GLPI)",
+  "Proxy / messagerie (Artica)",
+  "Téléphonie IP (XiVO)",
+  "Contrôleur WiFi"
+];
+
 
   const competencesPersonnelles = [
     "Travail en équipe",
@@ -99,7 +102,7 @@ const About = () => {
               <h3 className="text-2xl font-bold text-white mb-6">Mon Profil</h3>
               <p className="text-gray-300 leading-relaxed mb-6">
                 Passionné par l'informatique depuis le lycée où j'ai choisi les spécialités Mathématiques et Informatique, 
-                j'ai poursuivi mes études avec un DUT Informatique en 2023. Actuellement en 2ème année de BTS SIO option SISR, 
+                j'ai poursuivi mes études avec un BUT Informatique en 2023. Actuellement en 2ème année de BTS SIO option SISR, 
                 je me spécialise dans l'administration des systèmes et réseaux.
               </p>
               <p className="text-gray-300 leading-relaxed mb-6">
@@ -119,14 +122,13 @@ const About = () => {
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-white text-center mb-12">Mon Parcours</h3>
           <div className="relative">
-            {/* Timeline line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-600 to-purple-400"></div>
             
             <div className="space-y-12">
               {parcours.map((etape, index) => (
                 <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
-                    <div className={`bg-gradient-to-br from-gray-800/50 to-gray-700/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 hover:border-purple-500/40 transition-all duration-300`}>
+                    <div className="bg-gradient-to-br from-gray-800/50 to-gray-700/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 hover:border-purple-500/40 transition-all duration-300">
                       <div className="flex items-center space-x-3 mb-3">
                         <div className={`bg-gradient-to-br ${etape.color} p-2 rounded-lg`}>
                           <etape.icon className="text-white" size={20} />
@@ -139,7 +141,6 @@ const About = () => {
                     </div>
                   </div>
                   
-                  {/* Timeline dot */}
                   <div className="relative">
                     <div className="w-4 h-4 bg-purple-600 rounded-full border-4 border-gray-900"></div>
                   </div>

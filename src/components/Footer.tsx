@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="text-purple-400" size={20} />
-                <span className="text-gray-300">contact@portfolio.com</span>
+                <span className="text-gray-300">naweldayrek29@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Linkedin className="text-purple-400" size={20} />
@@ -43,7 +43,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold text-white mb-4">Portfolio</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Étudiant en BTS SIO option SISR, passionné par l'administration réseau 
+              Étudiante en BTS SIO option SISR, passionnée par l'administration réseau 
               et les technologies informatiques. En alternance au Grand Bleu.
             </p>
           </div>
@@ -57,7 +57,7 @@ const Footer = () => {
             <span>et React</span>
           </div>
           <div className="text-gray-400 text-sm">
-            Étudiant BTS SIO - Option SISR
+            Étudiante BTS SIO - Option SISR
           </div>
         </div>
       </div>
