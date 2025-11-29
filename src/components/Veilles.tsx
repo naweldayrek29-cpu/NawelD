@@ -4,6 +4,7 @@ import { Eye, Scale, Cpu, ExternalLink, Calendar, Tag } from 'lucide-react';
 const Veilles = () => {
   const [activeCategory, setActiveCategory] = useState<'technologique' | 'juridique'>('technologique');
 
+  // --- VEILLES SIMPLIFIÉES SELON TA DEMANDE ---
   const veilles: Record<'technologique' | 'juridique', Array<{
     title: string;
     description: string;
@@ -11,105 +12,56 @@ const Veilles = () => {
     date: string;
     tags: string[];
     link: string;
+    morePage: string;
     color: string;
   }>> = {
     technologique: [
-      // 🔥 Ajouts demandés
       {
-        title: "Free : fuite de données et vol d’IBAN",
+        title: "IA Claude utilisée dans des opérations de cyberespionnage",
         description:
-          "Une vaste fuite (fin 2024) a exposé des données d’abonnés Free, dont certains IBAN. Des campagnes de phishing récentes réutilisent ces infos pour paraître crédibles.",
-        source: "Cybermalveillance.gouv.fr",
-        date: "Octobre 2024 – Octobre 2025 (suivi)",
-        tags: ["Fuite de données", "IBAN", "Phishing", "Télécom"],
-        link: "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/violation-de-donnees-personnelles-free-202410",
-        color: "from-rose-600 to-rose-700"
-      },
-      {
-        title: "Panne AWS (Amazon) : de nombreuses applis impactées",
-        description:
-          "Une panne majeure d’AWS (US-EAST-1) a provoqué des indisponibilités en chaîne (DNS/équilibreurs) touchant des apps grand public et pro à l’échelle mondiale.",
-        source: "The Verge",
-        date: "Octobre 2025",
-        tags: ["Cloud", "AWS", "Disponibilité", "DNS"],
-        link: "https://www.theverge.com/news/802486/aws-outage-alexa-fortnite-snapchat-offline",
+          "Une étude révèle que l’IA Claude d’Anthropic a été exploitée pour planifier et exécuter une cyberattaque complète, marquant un tournant majeur dans la cybersécurité.",
+        source: "Le Monde Informatique",
+        date: "Novembre 2025",
+        tags: ["Fuite de données", "Amazon", "Cybersécurité"],
+        link: "https://www.bfmtv.com/tech/intelligence-artificielle/claude-l-intelligence-artificielle-d-anthropic-aurait-ete-utilisee-pour-mener-une-cyberattaque-complexe-concue-a-80-ou-90-par-l-ia-coup-de-semonce-ou-coup-de-pub_AV-202511240921.html",
+        morePage: "/veille/amazon-fuite", // ⚠️ Page interne à créer dans ton portfolio
         color: "from-yellow-600 to-yellow-700"
       },
-
-      // ✅ Ton contenu existant
       {
-        title: "Évolution de la Cybersécurité en 2024",
-        description: "Les nouvelles menaces et les solutions émergentes dans la cybersécurité, notamment l'IA dans la sécurité.",
-        source: "ANSSI, CERT-FR",
+        title: "Phishing : escroqueries numériques en forte hausse",
+        description:
+          "Le phishing reste l’une des attaques les plus répandues en France, utilisant des SMS, e‑mails ou appels frauduleux pour voler des données personnelles ou bancaires.",
+        source: "Cybermalveillance.gouv.fr",
         date: "Décembre 2024",
-        tags: ["Cybersécurité", "IA", "Menaces"],
-        link: "#",
-        color: "from-red-600 to-red-700"
-      },
-      {
-        title: "Cloud Computing et Edge Computing",
-        description: "L'évolution vers le cloud hybride et l'importance croissante de l'edge computing pour les infrastructures modernes.",
-        source: "AWS, Microsoft Azure",
-        date: "Novembre 2024",
-        tags: ["Cloud", "Edge Computing", "Infrastructure"],
-        link: "#",
-        color: "from-blue-600 to-blue-700"
-      },
-      {
-        title: "Virtualisation et Conteneurisation",
-        description: "Les dernières innovations en virtualisation, Docker, Kubernetes et leur impact sur l'administration système.",
-        source: "Docker, VMware",
-        date: "Octobre 2024",
-        tags: ["Docker", "Kubernetes", "Virtualisation"],
-        link: "#",
-        color: "from-green-600 to-green-700"
-      },
-      {
-        title: "Intelligence Artificielle en IT",
-        description: "L'intégration de l'IA dans l'administration réseau et le support technique pour améliorer l'efficacité.",
-        source: "Cisco, HPE",
-        date: "Septembre 2024",
-        tags: ["IA", "Automatisation", "Réseau"],
-        link: "#",
-        color: "from-purple-600 to-purple-700"
+        tags: ["Phishing", "Cyberattaque", "Ingénierie sociale"],
+        link: "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/dossier-phishing",
+        morePage: "/veille/phishing-france", // ⚠️ Page interne à créer
+        color: "from-rose-600 to-rose-700"
       }
     ],
+
     juridique: [
       {
-        title: "RGPD et Protection des Données",
-        description: "Mise à jour des réglementations RGPD et impact sur les SI et la gestion des données perso.",
+        title: "Violation de données à la Fédération Française de Tir",
+        description:
+          "Une fuite de données personnelles a touché la FFTir, exposant les informations d’adhérents et augmentant les risques d’usurpation d’identité.",
         source: "CNIL",
-        date: "Décembre 2024",
-        tags: ["RGPD", "Protection données", "Conformité"],
-        link: "#",
+        date: "Novembre 2025",
+        tags: ["Fuite de données", "Sécurité", "FFTir"],
+        link: "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/violation-de-donnees-personnelles-fftir-202511",
+        morePage: "/veille/rgpd", // ⚠️ Page interne à créer
         color: "from-indigo-600 to-indigo-700"
       },
       {
-        title: "Directive NIS2 en Europe",
-        description: "La nouvelle directive sur la sécurité des réseaux et des systèmes d'information et ses implications.",
+        title: "RGPD : de quoi parle‑t‑on ?",
+        description:
+          "Le RGPD encadre le traitement des données personnelles en Europe et impose des obligations essentielles aux organisations.",
         source: "Union Européenne",
-        date: "Novembre 2024",
-        tags: ["NIS2", "Sécurité", "Réglementation"],
-        link: "#",
-        color: "from-yellow-600 to-yellow-700"
-      },
-      {
-        title: "Droit à la Déconnexion",
-        description: "Évolutions sur le droit à la déconnexion et impacts sur l’informatique d’entreprise.",
-        source: "Légifrance",
         date: "Octobre 2024",
-        tags: ["Droit social", "Numérique", "Entreprise"],
-        link: "#",
-        color: "from-cyan-600 to-cyan-700"
-      },
-      {
-        title: "Cybermalveillance et Responsabilités",
-        description: "Cadre juridique de la lutte contre la cybermalveillance et responsabilités des admins systèmes.",
-        source: "Cybermalveillance.gouv.fr",
-        date: "Septembre 2024",
-        tags: ["Cybermalveillance", "Responsabilité", "Juridique"],
-        link: "#",
-        color: "from-orange-600 to-orange-700"
+        tags: ["RGPD", "Protection des données", "CNIL"],
+        link: "https://www.cnil.fr/fr/reglement-europeen-protection-donnees",
+        morePage: "/veille/nis2", // ⚠️ Page interne à créer
+        color: "from-blue-600 to-blue-700"
       }
     ]
   };
@@ -127,7 +79,7 @@ const Veilles = () => {
           </p>
         </div>
 
-        {/* Category Selector */}
+        {/* Sélecteur de catégorie */}
         <div className="flex justify-center mb-12">
           <div className="bg-gray-800/50 rounded-full p-2 border border-purple-500/20 flex gap-2">
             <button
@@ -141,6 +93,7 @@ const Veilles = () => {
               <Cpu size={20} />
               <span>Veille Technologique</span>
             </button>
+
             <button
               onClick={() => setActiveCategory('juridique')}
               className={`flex items-center space-x-2 px-6 py-3 rounded-full transition-all duration-300 ${
@@ -155,7 +108,7 @@ const Veilles = () => {
           </div>
         </div>
 
-        {/* Veilles Grid */}
+        {/* Grille des veilles */}
         <div className="grid md:grid-cols-2 gap-8">
           {veilles[activeCategory].map((veille, index) => (
             <div
@@ -194,29 +147,29 @@ const Veilles = () => {
                 </div>
               </div>
 
-              <div className="flex justify-end">
+              {/* Boutons navigation */}
+              <div className="flex justify-between items-center mt-4">
+                {/* Lien externe */}
                 <a
                   href={veille.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors"
                 >
-                  <span>Lire plus</span>
+                  <span>En savoir plus</span>
                   <ExternalLink size={16} />
+                </a>
+
+                {/* Page interne */}
+                <a
+                  href={veille.morePage}
+                  className="text-gray-300 hover:text-white transition-colors underline"
+                >
+                  Voir la description
                 </a>
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Information Box */}
-        <div className="mt-12 text-center bg-gradient-to-r from-purple-600/10 to-purple-800/10 border border-purple-500/20 rounded-xl p-8">
-          <Eye className="text-purple-400 mx-auto mb-4" size={48} />
-          <h3 className="text-2xl font-bold text-white mb-4">Importance de la Veille</h3>
-          <p className="text-gray-300 max-w-2xl mx-auto">
-            Dans un secteur en évolution permanente, rester informée permet d’anticiper les risques (fuite de données,
-            phishing) et de comprendre l’impact des pannes d’infrastructures cloud sur les services critiques.
-          </p>
         </div>
       </div>
     </section>

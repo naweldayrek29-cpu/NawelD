@@ -21,9 +21,8 @@ interface Projet {
   status: ProjetStatus;
   icon: LucideIcon;
   color: string;
-  link?: string;
-  repo?: string;
   download?: string;
+  view?: string;
 }
 
 const Projets = () => {
@@ -34,30 +33,19 @@ const Projets = () => {
       {
         title: "Paramétrage Routeur & Switch",
         description:
-          "Procédure PDF détaillée pour configurer un switch Netgear et un routeur Zyxel avec VLAN, IP et DHCP.",
+          "Mise en place de deux VLAN isolés en DHCP afin de segmenter le réseau et renforcer la sécurité.",
         technologies: ["Switch Netgear", "Routeur Zyxel", "VLAN", "DHCP"],
-        date: "2025",
+        date: "01/01/2025 au 01/02/2025",
         status: "Terminé",
         icon: School,
         color: "from-indigo-600 to-indigo-700",
         download: import.meta.env.BASE_URL + "Parametrage_Routeur_Switch.pdf",
+        view: import.meta.env.BASE_URL + "Parametrage_Routeur_Switch.pdf",
       },
-      {
-        title: "Application de Gestion Parc Informatique",
-        description:
-          "Développement d'une application web pour la gestion d'un parc informatique avec base de données.",
-        technologies: ["PHP", "MySQL", "Bootstrap", "JavaScript"],
-        date: "2024",
-        status: "En cours",
-        icon: FolderOpen,
-        color: "from-green-600 to-green-700",
-      },
-
-      // ===== Ajouts demandés =====
       {
         title: "Installation de GLPI",
         description:
-          "Mise en place de GLPI pour la gestion des tickets et des actifs (installation, base de données, serveur web, LDAP/AD, notifications mail et agents d’inventaire).",
+          "Déploiement d’une solution ITSM complète : gestion des tickets, inventaire, parc informatique et intégration LDAP/AD.",
         technologies: [
           "GLPI",
           "Linux (Debian/Ubuntu)",
@@ -68,25 +56,29 @@ const Projets = () => {
           "SMTP",
           "GLPI Agent"
         ],
-        date: "2025",
+        date: "01/03/2025 à aujourd'hui",
         status: "Terminé",
         icon: FolderOpen,
         color: "from-teal-600 to-teal-700",
+        download: import.meta.env.BASE_URL + "Procédure_GLPI.pdf",
+        view: import.meta.env.BASE_URL + "Procédure_GLPI.pdf",
       },
       {
         title: "Installation de Zabbix",
         description:
-          "Déploiement d’une plateforme de supervision Zabbix avec découverte d’hôtes, templates SNMP/agent, cartes, alertes et tableaux de bord.",
+          "Mise en place d’une plateforme de supervision : découverte automatique des hôtes, alertes, tableaux de bord et surveillance SNMP.",
         technologies: ["Zabbix Server", "Zabbix Agent", "SNMP", "MySQL/MariaDB", "Linux"],
-        date: "2025",
+        date: "01/03/2025 à aujourd'hui",
         status: "Terminé",
         icon: FolderOpen,
         color: "from-orange-600 to-orange-700",
+        download: import.meta.env.BASE_URL + "Procédure_Zabbix.pdf",
+        view: import.meta.env.BASE_URL + "Procédure_Zabbix.pdf",
       },
       {
         title: "Installation d’Artica Proxy",
         description:
-          "Mise en place d’Artica Proxy (Squid) : contrôle d’accès, authentification LDAP/AD, filtrage web, logs et rapports.",
+          "Configuration d’un proxy filtrant basé sur Squid : authentification LDAP/AD, filtrage web et gestion avancée des journaux.",
         technologies: ["Artica Proxy", "Squid", "LDAP/AD", "SSL", "Linux"],
         date: "2025",
         status: "Terminé",
@@ -96,7 +88,7 @@ const Projets = () => {
       {
         title: "Installation de XiVO (VoIP)",
         description:
-          "Installation et configuration de XiVO (Asterisk) : utilisateurs, trunks, plans de numérotation, files d’attente et softphones.",
+          "Déploiement d’une solution de téléphonie IP : utilisateurs, trunks SIP, plan de numérotation et files d’attente.",
         technologies: ["XiVO", "Asterisk", "SIP", "VoIP", "Debian"],
         date: "2025",
         status: "Terminé",
@@ -107,8 +99,7 @@ const Projets = () => {
     professionnel: [
       {
         title: "Modernisation Site Web Grand Bleu",
-        description:
-          "Refonte et optimisation du site de réservation avec interface responsive et système de réservation amélioré.",
+        description: "Refonte du site avec une interface modernisée, responsive et un système de réservation amélioré.",
         technologies: ["WordPress", "PHP", "CSS", "JavaScript"],
         date: "2024",
         status: "En cours",
@@ -116,38 +107,25 @@ const Projets = () => {
         color: "from-cyan-600 to-cyan-700",
       },
       {
-        title: "Automatisation Création Emails",
-        description:
-          "Script d'automatisation pour la création d'adresses email avec le domaine du Grand Bleu.",
-        technologies: ["PowerShell", "Active Directory", "Exchange"],
+        title: "Création Emails",
+        description: "Création des Emails des nouveaux apprentis ou employés via Exchange.",
+        technologies: ["Active Directory", "Exchange"],
         date: "2024",
         status: "Terminé",
         icon: Users,
         color: "from-orange-600 to-orange-700",
-      },
-      {
-        title: "Système de Monitoring Réseau",
-        description:
-          "Mise en place d'un système de surveillance du réseau informatique avec alertes en temps réel.",
-        technologies: ["PRTG", "SNMP", "PowerShell", "MySQL"],
-        date: "2023",
-        status: "Terminé",
-        icon: Building,
-        color: "from-red-600 to-red-700",
       },
     ],
   };
 
   return (
     <section id="projets" className="py-20 bg-gradient-to-b from-gray-800 to-gray-900">
-      {/* Titre de section */}
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">Mes Projets</h2>
         <p className="text-gray-300 mb-8">Sélection de réalisations scolaires et professionnelles.</p>
 
-        {/* Tabs catégorie */}
         <div className="flex justify-center mb-8 gap-2">
-          {(['scolaire','professionnel'] as Category[]).map((cat)=> (
+          {(['scolaire', 'professionnel'] as Category[]).map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
@@ -162,7 +140,6 @@ const Projets = () => {
           ))}
         </div>
 
-        {/* Cartes projets */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projets[activeCategory].map((projet, index) => {
             const Icon = projet.icon;
@@ -204,6 +181,16 @@ const Projets = () => {
                   </span>
 
                   <div className="flex space-x-2">
+                    {projet.view && (
+                      <a
+                        href={projet.view}
+                        target="_blank"
+                        className="inline-flex items-center gap-1 px-3 py-2 rounded-md bg-purple-600/20 text-purple-200 hover:bg-purple-600/30 transition-colors"
+                      >
+                        Voir
+                      </a>
+                    )}
+
                     {projet.download && (
                       <a
                         href={projet.download}
