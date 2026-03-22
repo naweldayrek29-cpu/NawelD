@@ -47,7 +47,7 @@ const Projets = () => {
       {
         title: "Installation de GLPI",
         description:
-          "Déploiement d’une solution ITSM complète : gestion des tickets, inventaire, parc informatique et intégration LDAP/AD.",
+          "Déploiement d’une solution de ticketing : gestion des tickets, inventaire, parc informatique et intégration LDAP/AD.",
         technologies: [
           "GLPI",
           "Linux (Debian/Ubuntu)",
