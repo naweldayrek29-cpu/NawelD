@@ -104,7 +104,7 @@ const Projets = () => {
         title: "Installation de XiVO (VoIP)",
         description:
           "Déploiement d’une solution de téléphonie IP : utilisateurs, trunks SIP, plan de numérotation et tests d’appels.",
-        technologies: ["XiVO", "Asterisk", "SIP", "VoIP", "Debian", "Zoiper"],
+        technologies: ["XiVO", "SIP", "VoIP", "Debian", "Zoiper"],
         date: "01/12/2025 à aujourd'hui",
         status: "Terminé",
         icon: FolderOpen,
