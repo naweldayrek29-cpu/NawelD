@@ -51,8 +51,7 @@ const Projets = () => {
         technologies: [
           "GLPI",
           "Linux (Debian/Ubuntu)",
-          "Apache/Nginx",
-          "PHP-FPM",
+          "Apache",
           "MariaDB/MySQL",
           "LDAP / Active Directory",
           "SMTP",
