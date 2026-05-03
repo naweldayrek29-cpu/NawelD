@@ -133,6 +133,7 @@ const Veilles = () => {
         description:
           "Le RGPD (Règlement Général sur la Protection des Données) encadre le traitement des données personnelles en Europe et impose des obligations essentielles aux organisations.",
         fullDescription:
+
           "Le RGPD (Règlement Général sur la Protection des Données) est un règlement européen qui encadre l’utilisation des données personnelles. Il impose aux entreprises, administrations et organismes de respecter plusieurs obligations, comme informer les personnes concernées, sécuriser les données collectées et limiter leur utilisation à des objectifs précis.",
 
         legalFramework: [
@@ -156,6 +157,8 @@ const Veilles = () => {
 
         conclusion:
           "Cette veille montre que l’informatique ne concerne pas seulement la technique. Avec l’augmentation des cyberattaques, du phishing (technique de fraude visant à tromper l’utilisateur pour obtenir ses informations) et de la collecte massive de données, le RGPD est devenu essentiel pour protéger les utilisateurs. Il impose aux organisations de réagir rapidement en cas d’incident, de sécuriser leurs systèmes et d’assumer leurs responsabilités juridiques. Respecter le RGPD permet ainsi d’éviter des sanctions, de renforcer la sécurité et de maintenir la confiance des utilisateurs.",
+
+
 
         source: "Union Européenne / CNIL",
         date: "Octobre 2024",
@@ -341,7 +344,6 @@ const Veilles = () => {
                   <h4 className="text-xl font-semibold text-white mb-3">
                     Cadre juridique du RGPD
                   </h4>
-
                   <ul className="list-disc list-inside space-y-2">
                     {selectedVeille.legalFramework.map((article, index) => (
                       <li key={index}>{article}</li>
@@ -396,7 +398,6 @@ const Veilles = () => {
                   <h4 className="text-xl font-semibold text-white mb-3">
                     Conclusion
                   </h4>
-
                   <p>{selectedVeille.conclusion}</p>
                 </div>
               )}
