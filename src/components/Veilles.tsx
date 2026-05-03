@@ -7,6 +7,11 @@ type Veille = {
   title: string;
   description: string;
   fullDescription: string;
+  legalFramework?: string[];
+  cnilRole?: string;
+  concreteExample?: string;
+  currentIssue?: string;
+  conclusion?: string;
   source: string;
   date: string;
   tags: string[];
@@ -64,8 +69,29 @@ const Veilles = () => {
         description:
           "Le RGPD encadre le traitement des données personnelles en Europe et impose des obligations essentielles aux organisations.",
         fullDescription:
-          "Le RGPD est un règlement européen qui encadre l’utilisation des données personnelles. Il impose aux entreprises et aux organismes de respecter plusieurs obligations, comme informer les personnes concernées, sécuriser les données collectées et limiter leur utilisation à des objectifs précis. Cette réglementation est essentielle car elle protège la vie privée des utilisateurs dans un monde de plus en plus numérique. À mon avis, cette veille est importante car elle montre que l’informatique ne concerne pas seulement la technique : elle implique aussi des responsabilités juridiques et éthiques.",
-        source: "Union Européenne",
+          "Le RGPD est un règlement européen qui encadre l’utilisation des données personnelles. Il impose aux entreprises, administrations et organismes de respecter plusieurs obligations, comme informer les personnes concernées, sécuriser les données collectées et limiter leur utilisation à des objectifs précis.",
+
+        legalFramework: [
+          "Article 5 : il définit les grands principes du RGPD, comme la transparence, la limitation des finalités, la minimisation des données et la sécurité.",
+          "Article 6 : il précise qu’un traitement de données doit toujours avoir une base légale, comme le consentement, l’exécution d’un contrat ou une obligation légale.",
+          "Articles 15 à 17 : ils garantissent aux personnes le droit d’accès, le droit de rectification et le droit à l’effacement de leurs données personnelles.",
+          "Article 32 : il impose aux organisations de mettre en place des mesures techniques et organisationnelles adaptées pour protéger les données.",
+          "Article 33 : il oblige les organisations à notifier une violation de données à la CNIL dans un délai de 72 heures lorsqu’il existe un risque pour les personnes concernées."
+        ],
+
+        cnilRole:
+          "En France, la CNIL est l’autorité chargée de faire respecter le RGPD. Elle accompagne les organisations, informe les citoyens, contrôle les entreprises et peut prononcer des sanctions en cas de non-respect des règles.",
+
+        concreteExample:
+          "Par exemple, lorsqu’une entreprise subit une fuite de données personnelles, elle doit réagir rapidement, sécuriser son système, informer la CNIL si nécessaire et prévenir les personnes concernées lorsque le risque est important. Cela montre que la protection des données est à la fois une responsabilité juridique et technique.",
+
+        currentIssue:
+          "Avec l’augmentation des cyberattaques, du phishing et de la collecte massive de données, le RGPD est devenu un outil essentiel pour protéger les utilisateurs et responsabiliser les organisations.",
+
+        conclusion:
+          "Cette veille montre que l’informatique ne concerne pas seulement la technique. Elle implique aussi des responsabilités juridiques, éthiques et sécuritaires. Pour une organisation, respecter le RGPD permet de protéger les utilisateurs, d’éviter des sanctions et de renforcer la confiance.",
+
+        source: "Union Européenne / CNIL",
         date: "Octobre 2024",
         tags: ["RGPD", "Protection des données", "CNIL"],
         link: "https://www.cnil.fr/fr/reglement-europeen-protection-donnees",
@@ -83,7 +109,8 @@ const Veilles = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white">Mes Veilles</h2>
           </div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Suivi de l'actualité technologique et juridique dans le domaine informatique
+            Suivi de l’actualité technologique et juridique afin de comprendre les enjeux de la cybersécurité,
+            de la protection des données et des obligations légales des organisations.
           </p>
         </div>
 
@@ -199,9 +226,58 @@ const Veilles = () => {
               </button>
             </div>
 
-            <p className="text-gray-300 leading-8 text-lg mb-6">
-              {selectedVeille.fullDescription}
-            </p>
+            <div className="space-y-6 text-gray-300 leading-8 text-lg mb-6">
+              <p>{selectedVeille.fullDescription}</p>
+
+              {selectedVeille.legalFramework && (
+                <div>
+                  <h4 className="text-xl font-semibold text-white mb-3">
+                    Cadre juridique du RGPD
+                  </h4>
+                  <ul className="list-disc list-inside space-y-2">
+                    {selectedVeille.legalFramework.map((article, index) => (
+                      <li key={index}>{article}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {selectedVeille.cnilRole && (
+                <div>
+                  <h4 className="text-xl font-semibold text-white mb-3">
+                    Rôle de la CNIL
+                  </h4>
+                  <p>{selectedVeille.cnilRole}</p>
+                </div>
+              )}
+
+              {selectedVeille.concreteExample && (
+                <div>
+                  <h4 className="text-xl font-semibold text-white mb-3">
+                    Exemple concret
+                  </h4>
+                  <p>{selectedVeille.concreteExample}</p>
+                </div>
+              )}
+
+              {selectedVeille.currentIssue && (
+                <div>
+                  <h4 className="text-xl font-semibold text-white mb-3">
+                    Enjeu actuel
+                  </h4>
+                  <p>{selectedVeille.currentIssue}</p>
+                </div>
+              )}
+
+              {selectedVeille.conclusion && (
+                <div>
+                  <h4 className="text-xl font-semibold text-white mb-3">
+                    Conclusion
+                  </h4>
+                  <p>{selectedVeille.conclusion}</p>
+                </div>
+              )}
+            </div>
 
             <div className="flex flex-wrap gap-2 mb-6">
               {selectedVeille.tags.map((tag, index) => (
