@@ -59,81 +59,15 @@ const Veilles = () => {
         tags: ["IA", "Claude", "Cyberespionnage", "Cybersécurité"],
         link: "https://www.anthropic.com/news/disrupting-AI-espionage",
         color: "from-yellow-600 to-yellow-700"
-      },
-      {
-  title: "Phishing : escroqueries numériques en forte hausse",
-  description:
-    "Le phishing reste l’une des attaques les plus répandues en France, utilisant des SMS, e-mails ou appels frauduleux pour voler des données personnelles ou bancaires.",
-
-  fullDescription:
-    "Cette veille explique que le phishing est aujourd’hui l’une des formes de cyberattaque les plus courantes. Les pirates utilisent de faux e-mails, de faux SMS ou même des appels pour tromper les victimes et récupérer leurs informations personnelles ou bancaires. Cette méthode repose surtout sur la manipulation et la confiance de l’utilisateur. Ce sujet est important car il montre que la cybersécurité ne dépend pas uniquement des outils techniques, mais aussi du comportement humain. À mon avis, cette menace est particulièrement dangereuse car elle touche tout le monde et peut avoir des conséquences graves, aussi bien pour les particuliers que pour les entreprises.",
-
-  technicalDetails: [
-    "Les pirates créent de faux e-mails ou SMS imitant des entreprises connues (banques, impôts, livraison…).",
-    "Ils redirigent les victimes vers de faux sites internet très ressemblants aux sites officiels.",
-    "Les utilisateurs sont incités à entrer leurs identifiants ou leurs données bancaires.",
-    "Le phishing peut aussi prendre la forme de smishing (SMS frauduleux) ou de vishing (appel téléphonique).",
-    "Les attaques reposent souvent sur des techniques d’ingénierie sociale (urgence, peur, confiance)."
-  ],
-
-  risks: [
-    "Vol d’identifiants de connexion (mail, réseaux sociaux, comptes professionnels).",
-    "Accès frauduleux à des comptes bancaires ou administratifs.",
-    "Usurpation d’identité à partir des données personnelles récupérées.",
-    "Installation de logiciels malveillants via des pièces jointes.",
-    "Propagation d’une attaque dans une entreprise si un salarié est piégé."
-  ],
-
-  techConclusion:
-    "Le phishing reste une menace majeure car il exploite principalement le facteur humain. Même avec des systèmes de sécurité performants, une erreur d’attention peut suffire à compromettre des données sensibles.",
-
-  source: "Cybermalveillance.gouv.fr",
-  date: "Décembre 2024",
-  tags: ["Phishing", "Cyberattaque", "Ingénierie sociale", "Cybersécurité"],
-  link: "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/dossier-phishing",
-  color: "from-rose-600 to-rose-700"
-}
+      }
     ],
+
     juridique: [
-      {
-        title: "Violation de données à la Fédération Française de Tir",
-        description:
-          "Une fuite de données personnelles a touché la FFTir suite à une intrusion informatique, exposant les informations de nombreux adhérents.",
-
-        fullDescription:
-          "En octobre 2025, la FFTir (Fédération Française de Tir) a été victime d’une cyberattaque. Une intrusion non autorisée a été détectée sur ses systèmes informatiques entre le 18 et le 20 octobre 2025. Cette attaque a permis à des individus malveillants d’accéder à des données personnelles de licenciés.\n\nLes données concernées incluent des informations d’identité (nom, prénom, date de naissance), ainsi que des coordonnées (adresse, e-mail, téléphone et numéro de licence).\n\nMême si aucune donnée bancaire ou liée aux armes n’a été compromise, cette fuite reste grave car ces informations peuvent être utilisées pour des attaques de phishing (arnaques), d’usurpation d’identité ou même des cambriolages ciblés.",
-
-        steps: [
-          "Détection d’une intrusion non autorisée dans le système informatique",
-          "Déconnexion immédiate des serveurs pour stopper l’attaque",
-          "Signalement de l’incident aux autorités (CNIL)",
-          "Dépôt de plainte et ouverture d’une enquête",
-          "Information des licenciés concernés",
-          "Mise en place de nouvelles mesures de sécurité et audit du système"
-        ],
-
-        legalFramework: [
-          "Article 32 du RGPD (Règlement Général sur la Protection des Données) : la présence d’une intrusion montre que les mesures de sécurité mises en place n’étaient pas suffisantes.",
-          "Article 5 du RGPD : le principe de confidentialité et d’intégrité des données n’a pas été respecté puisque des informations personnelles ont été accessibles.",
-          "Article 33 du RGPD : la FFTir a respecté son obligation de notification en informant la CNIL après la fuite.",
-          "Article 34 du RGPD : la FFTir a également respecté son obligation d’information en prévenant les personnes concernées."
-        ],
-
-        conclusion:
-          "Cette affaire montre que même des organisations publiques ou sportives peuvent être ciblées par des cyberattaques. Elle met en évidence l’importance de la cybersécurité et du respect du RGPD. Une faille de sécurité peut avoir des conséquences graves, même sans données sensibles comme les coordonnées bancaires. Avec l’augmentation des cyberattaques, les organisations doivent renforcer leurs systèmes, anticiper les risques et protéger les données personnelles pour éviter les abus et maintenir la confiance des utilisateurs.",
-
-        source: "Cybermalveillance.gouv.fr / FFTir",
-        date: "Novembre 2025",
-        tags: ["Fuite de données", "RGPD", "Cybersécurité", "FFTir"],
-        link: "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/violation-de-donnees-personnelles-fftir-202511",
-        color: "from-indigo-600 to-indigo-700"
-      },
       {
         title: "RGPD : de quoi parle-t-on ?",
         description:
           "Le RGPD (Règlement Général sur la Protection des Données) encadre le traitement des données personnelles en Europe et impose des obligations essentielles aux organisations.",
         fullDescription:
-
           "Le RGPD (Règlement Général sur la Protection des Données) est un règlement européen qui encadre l’utilisation des données personnelles. Il impose aux entreprises, administrations et organismes de respecter plusieurs obligations, comme informer les personnes concernées, sécuriser les données collectées et limiter leur utilisation à des objectifs précis.",
 
         legalFramework: [
@@ -157,8 +91,6 @@ const Veilles = () => {
 
         conclusion:
           "Cette veille montre que l’informatique ne concerne pas seulement la technique. Avec l’augmentation des cyberattaques, du phishing (technique de fraude visant à tromper l’utilisateur pour obtenir ses informations) et de la collecte massive de données, le RGPD est devenu essentiel pour protéger les utilisateurs. Il impose aux organisations de réagir rapidement en cas d’incident, de sécuriser leurs systèmes et d’assumer leurs responsabilités juridiques. Respecter le RGPD permet ainsi d’éviter des sanctions, de renforcer la sécurité et de maintenir la confiance des utilisateurs.",
-
-
 
         source: "Union Européenne / CNIL",
         date: "Octobre 2024",
@@ -365,9 +297,7 @@ const Veilles = () => {
               {selectedVeille.steps && (
                 <div>
                   <h4 className="text-xl font-semibold text-white mb-4">
-                    {selectedVeille.title.includes("Fédération Française de Tir")
-                      ? "Gestion de l’incident : actions menées par la FFTir après la fuite de données"
-                      : "Étapes à suivre en cas de fuite de données ou de cyberattaque"}
+                    Étapes à suivre en cas de fuite de données ou de cyberattaque
                   </h4>
 
                   <div className="grid md:grid-cols-5 gap-4 text-center">
