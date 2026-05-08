@@ -40,14 +40,13 @@ const About = () => {
   const competencesTechniques = [
   "Administration Windows Server / Linux",
   "Configuration et maintenance réseaux",
-  "Supervision systèmes (PRTG, SNMP, Zabbix)",
+  "Supervision systèmes (Zabbix)",
   "Gestion Active Directory",
-  "Virtualisation (VMware, Hyper-V)",
-  "Sécurité informatique et pare-feu",
+  "Virtualisation (Proxmox, Hyper-V)",
   "Gestion de tickets (GLPI)",
   "Proxy / messagerie (Artica)",
   "Téléphonie IP (XiVO)",
-  "Contrôleur WiFi"
+  "Contrôleur WiFi (Unifi)"
 ];
 
 
@@ -101,7 +100,7 @@ const About = () => {
             <div className="bg-gradient-to-br from-gray-800/50 to-gray-700/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-white mb-6">Mon Profil</h3>
               <p className="text-gray-300 leading-relaxed mb-6">
-                Passionné par l'informatique depuis le lycée où j'ai choisi les spécialités Mathématiques et Informatique, 
+                Passionnée par l'informatique depuis le lycée où j'ai choisi les spécialités Mathématiques et Informatique, 
                 j'ai poursuivi mes études avec un BUT Informatique en 2023. Actuellement en 2ème année de BTS SIO option SISR, 
                 je me spécialise dans l'administration des systèmes et réseaux.
               </p>
@@ -111,7 +110,7 @@ const About = () => {
                 gestion de services web et support utilisateur.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Mon objectif est de devenir un expert en infrastructure informatique, capable de concevoir, 
+                Mon objectif est de devenir une experte en infrastructure informatique, capable de concevoir, 
                 déployer et maintenir des solutions techniques robustes et sécurisées.
               </p>
             </div>

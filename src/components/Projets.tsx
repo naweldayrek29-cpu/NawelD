@@ -257,6 +257,72 @@ const Projets = () => {
           })}
         </div>
 
+        {activeCategory === 'scolaire' && (
+          <div className="mt-12 grid md:grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-gray-800/70 to-gray-700/70 border border-purple-500/30 rounded-2xl p-6 shadow-xl">
+              <div className="flex items-center gap-3 mb-4">
+                <FolderOpen className="text-purple-400" size={28} />
+                <h3 className="text-2xl font-bold text-white">Dossier E5</h3>
+              </div>
+
+              <p className="text-gray-300 mb-6">
+                Retrouvez ici mon dossier E5 lié à l’épreuve de support et mise à disposition de services informatiques.
+              </p>
+
+              <div className="flex gap-2">
+                <a
+                  href={import.meta.env.BASE_URL + "DOSSIERE5_DAYREK_Nawel.pdf"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 px-3 py-2 rounded-md bg-purple-600/20 text-purple-200 hover:bg-purple-600/30 transition-colors"
+                >
+                  Voir
+                </a>
+
+                <a
+                  href={import.meta.env.BASE_URL + "DOSSIERE5_DAYREK_Nawel.pdf"}
+                  download
+                  className="inline-flex items-center gap-1 px-3 py-2 rounded-md bg-purple-600/20 text-purple-200 hover:bg-purple-600/30 transition-colors"
+                >
+                  <Download size={18} />
+                  <span className="text-sm">Télécharger</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-gray-800/70 to-gray-700/70 border border-purple-500/30 rounded-2xl p-6 shadow-xl">
+              <div className="flex items-center gap-3 mb-4">
+                <FolderOpen className="text-purple-400" size={28} />
+                <h3 className="text-2xl font-bold text-white">Dossier E6</h3>
+              </div>
+
+              <p className="text-gray-300 mb-6">
+                Retrouvez ici mon dossier E6 lié à l’épreuve d’administration des systèmes et des réseaux.
+              </p>
+
+              <div className="flex gap-2">
+                <a
+                  href={import.meta.env.BASE_URL + "BTSSIREAPROE6_DAYREK_Nawel.pdf"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 px-3 py-2 rounded-md bg-purple-600/20 text-purple-200 hover:bg-purple-600/30 transition-colors"
+                >
+                  Voir
+                </a>
+
+                <a
+                  href={import.meta.env.BASE_URL + "BTSSIREAPROE6_DAYREK_Nawel.pdf"}
+                  download
+                  className="inline-flex items-center gap-1 px-3 py-2 rounded-md bg-purple-600/20 text-purple-200 hover:bg-purple-600/30 transition-colors"
+                >
+                  <Download size={18} />
+                  <span className="text-sm">Télécharger</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
+
       </div>
     </section>
   );
