@@ -119,11 +119,112 @@ const Projets = () => {
         title: "Mise en place d’un serveur Booking",
         description:
           "Déploiement d’une solution de réservation pour les cours de natation afin d’automatiser les inscriptions et centraliser la gestion des créneaux.",
+        fullDescription: (
+          <div className="space-y-4">
+            <div>
+              <span className="font-bold text-white">— Contexte</span>
+              <p>
+                Dans le cadre de mon alternance au sein de l’association Le Grand Bleu,
+                j’ai participé à la mise en place d’un serveur Booking pour moderniser
+                la gestion des réservations des cours de natation.
+              </p>
+            </div>
+
+            <div>
+              <span className="font-bold text-white">— Situation avant</span>
+              <ul className="list-disc pl-6 space-y-1">
+                <li>Les inscriptions étaient gérées manuellement</li>
+                <li>Les demandes arrivaient par téléphone ou par SMS</li>
+                <li>Les créneaux étaient saisis dans des tableaux Excel</li>
+              </ul>
+            </div>
+
+            <div>
+              <span className="font-bold text-white">— Problèmes rencontrés</span>
+              <ul className="list-disc pl-6 space-y-1">
+                <li>Perte de temps importante</li>
+                <li>Risque d’erreurs ou de doublons</li>
+                <li>Difficulté à suivre les disponibilités en temps réel</li>
+              </ul>
+            </div>
+
+            <div>
+              <span className="font-bold text-white">— Objectifs du projet</span>
+              <ul className="list-disc pl-6 space-y-1">
+                <li>Centraliser les réservations sur une plateforme unique</li>
+                <li>Automatiser la gestion des inscriptions</li>
+                <li>Réduire la charge administrative</li>
+                <li>Faciliter l’export des listes de présence pour les éducateurs sportifs</li>
+              </ul>
+            </div>
+
+            <div>
+              <span className="font-bold text-white">— Résultats obtenus</span>
+              <ul className="list-disc pl-6 space-y-1">
+                <li>Gestion des réservations plus rapide et centralisée</li>
+                <li>Réduction du temps consacré à la saisie manuelle</li>
+                <li>Moins d’erreurs dans le traitement des inscriptions</li>
+                <li>Meilleure organisation interne</li>
+              </ul>
+            </div>
+          </div>
+        ),
         technologies: ["Booking", "Base de données", "Excel", "Administration", "Gestion des réservations"],
         date: "01/07/2025 à aujourd'hui",
         status: "Terminé",
         icon: Building,
         color: "from-cyan-600 to-cyan-700",
+      },
+      {
+        title: "Gestion des groupes et des droits d’accès",
+        description:
+          "Organisation des accès aux ressources selon l’organigramme grâce à des groupes de sécurité Active Directory.",
+        fullDescription: (
+          <div className="space-y-4">
+            <div>
+              <span className="font-bold text-white">— Contexte</span>
+              <p>
+                Dans le cadre de l’administration de l’infrastructure informatique,
+                j’ai participé à la mise en place d’une gestion structurée des droits
+                d’accès selon l’organigramme de la structure.
+              </p>
+            </div>
+
+            <div>
+              <span className="font-bold text-white">— Principe retenu</span>
+              <ul className="list-disc pl-6 space-y-1">
+                <li>Les droits ne sont plus attribués utilisateur par utilisateur</li>
+                <li>Les accès sont gérés par groupes Active Directory</li>
+                <li>Chaque groupe correspond à un service ou à une fonction</li>
+              </ul>
+            </div>
+
+            <div>
+              <span className="font-bold text-white">— Objectifs du projet</span>
+              <ul className="list-disc pl-6 space-y-1">
+                <li>Mettre en place le principe du moindre privilège</li>
+                <li>Organiser les accès de manière claire et cohérente</li>
+                <li>Simplifier la gestion des comptes utilisateurs</li>
+                <li>Faciliter l’arrivée et le départ des collaborateurs</li>
+              </ul>
+            </div>
+
+            <div>
+              <span className="font-bold text-white">— Résultats obtenus</span>
+              <ul className="list-disc pl-6 space-y-1">
+                <li>Gestion centralisée et simplifiée des droits d’accès</li>
+                <li>Meilleure sécurisation des données sensibles</li>
+                <li>Gain de temps pour l’administration du système</li>
+                <li>Intégration plus rapide des nouveaux utilisateurs</li>
+              </ul>
+            </div>
+          </div>
+        ),
+        technologies: ["Active Directory", "Groupes de sécurité", "Gestion des droits", "Administration système"],
+        date: "15/09/2025 à aujourd'hui",
+        status: "Terminé",
+        icon: Users,
+        color: "from-orange-600 to-orange-700",
       },
     ],
   };
@@ -153,7 +254,6 @@ const Projets = () => {
           ))}
         </div>
 
-        {/* 🔥 SCHEMA AJOUTÉ */}
         {activeCategory === 'scolaire' && (
           <div className="mb-12 bg-gradient-to-br from-gray-800/70 to-gray-700/70 border border-purple-500/30 rounded-2xl p-6 shadow-xl">
             <div className="flex items-center gap-3 mb-4">
@@ -227,28 +327,46 @@ const Projets = () => {
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                    projet.status === 'Terminé'
-                      ? 'bg-green-600/20 text-green-300'
-                      : 'bg-orange-600/20 text-orange-300'
-                  }`}>
+                  <span
+                    className={`px-3 py-1 rounded-full text-sm font-medium ${
+                      projet.status === 'Terminé'
+                        ? 'bg-green-600/20 text-green-300'
+                        : 'bg-orange-600/20 text-orange-300'
+                    }`}
+                  >
                     {projet.status}
                   </span>
 
                   <div className="flex space-x-2">
                     {projet.view && (
-                      <a href={projet.view} target="_blank" rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 px-3 py-2 rounded-md bg-purple-600/20 text-purple-200 hover:bg-purple-600/30">
+                      <a
+                        href={projet.view}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 px-3 py-2 rounded-md bg-purple-600/20 text-purple-200 hover:bg-purple-600/30 transition-colors"
+                      >
                         Voir
                       </a>
                     )}
 
                     {projet.download && (
-                      <a href={projet.download} download
-                        className="inline-flex items-center gap-1 px-3 py-2 rounded-md bg-purple-600/20 text-purple-200 hover:bg-purple-600/30">
+                      <a
+                        href={projet.download}
+                        download
+                        className="inline-flex items-center gap-1 px-3 py-2 rounded-md bg-purple-600/20 text-purple-200 hover:bg-purple-600/30 transition-colors"
+                      >
                         <Download size={18} />
                         <span className="text-sm">Télécharger</span>
                       </a>
+                    )}
+
+                    {projet.fullDescription && (
+                      <button
+                        onClick={() => setSelectedProjet(projet)}
+                        className="inline-flex items-center gap-1 px-3 py-2 rounded-md bg-purple-600/20 text-purple-200 hover:bg-purple-600/30 transition-colors"
+                      >
+                        Voir la description
+                      </button>
                     )}
                   </div>
                 </div>
@@ -323,6 +441,40 @@ const Projets = () => {
           </div>
         )}
 
+        {selectedProjet && (
+          <div className="mt-12 bg-gray-800/70 border border-purple-500/30 rounded-2xl p-8 shadow-xl animate-fade-in">
+            <div className="flex justify-between items-start mb-6">
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-2">{selectedProjet.title}</h3>
+                <p className="text-sm text-gray-400">
+                  {selectedProjet.date} • {selectedProjet.status}
+                </p>
+              </div>
+
+              <button
+                onClick={() => setSelectedProjet(null)}
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <X size={24} />
+              </button>
+            </div>
+
+            <div className="text-gray-300 leading-8 text-base md:text-lg mb-6">
+              {selectedProjet.fullDescription}
+            </div>
+
+            <div className="flex flex-wrap gap-2 mb-2">
+              {selectedProjet.technologies.map((tech, index) => (
+                <span
+                  key={index}
+                  className="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm"
+                >
+                  #{tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
