@@ -114,67 +114,78 @@ const Projets = () => {
     ],
 
     professionnel: [
-      {
-        title: "Mise en place d’un serveur Booking",
-        description:
-          "Déploiement d’une solution de réservation pour les cours de natation afin d’automatiser les inscriptions et centraliser la gestion des créneaux.",
-        fullDescription: (
-          <div className="space-y-4">
-            <div>
-              <span className="font-bold text-white">— Contexte</span>
-              <p>
-                Dans le cadre de mon alternance au sein de l’association Le Grand Bleu,
-                j’ai participé à la mise en place d’un serveur Booking pour moderniser
-                la gestion des réservations des cours de natation.
-              </p>
-            </div>
+     {
+  title: "Mise en place du service Microsoft Bookings",
+  description:
+    "Configuration et gestion de Microsoft Bookings afin de moderniser la réservation des cours de natation et centraliser les inscriptions.",
+  fullDescription: (
+    <div className="space-y-4">
+      <div>
+        <span className="font-bold text-white">— Contexte</span>
+        <p>
+          Dans le cadre de mon alternance au sein de l’association Le Grand Bleu,
+          j’ai participé à la mise en place du service Microsoft Bookings afin
+          d’améliorer la gestion des réservations des cours de natation.
+        </p>
+      </div>
 
-            <div>
-              <span className="font-bold text-white">— Situation avant</span>
-              <ul className="list-disc pl-6 space-y-1">
-                <li>Les inscriptions étaient gérées manuellement</li>
-                <li>Les demandes arrivaient par téléphone ou par SMS</li>
-                <li>Les créneaux étaient saisis dans des tableaux Excel</li>
-              </ul>
-            </div>
+      <div>
+        <span className="font-bold text-white">— Situation avant</span>
+        <ul className="list-disc pl-6 space-y-1">
+          <li>Les inscriptions étaient gérées manuellement</li>
+          <li>Les demandes arrivaient par téléphone ou par SMS</li>
+          <li>Les créneaux étaient saisis dans des tableaux Excel</li>
+        </ul>
+      </div>
 
-            <div>
-              <span className="font-bold text-white">— Problèmes rencontrés</span>
-              <ul className="list-disc pl-6 space-y-1">
-                <li>Perte de temps importante</li>
-                <li>Risque d’erreurs ou de doublons</li>
-                <li>Difficulté à suivre les disponibilités en temps réel</li>
-              </ul>
-            </div>
+      <div>
+        <span className="font-bold text-white">— Problèmes rencontrés</span>
+        <ul className="list-disc pl-6 space-y-1">
+          <li>Perte de temps importante</li>
+          <li>Risque d’erreurs ou de doublons</li>
+          <li>Difficulté à suivre les disponibilités</li>
+        </ul>
+      </div>
 
-            <div>
-              <span className="font-bold text-white">— Objectifs du projet</span>
-              <ul className="list-disc pl-6 space-y-1">
-                <li>Centraliser les réservations sur une plateforme unique</li>
-                <li>Automatiser la gestion des inscriptions</li>
-                <li>Réduire la charge administrative</li>
-                <li>Faciliter l’export des listes de présence pour les éducateurs sportifs</li>
-              </ul>
-            </div>
+      <div>
+        <span className="font-bold text-white">— Objectifs du projet</span>
+        <ul className="list-disc pl-6 space-y-1">
+          <li>Centraliser les réservations</li>
+          <li>Automatiser les inscriptions</li>
+          <li>Réduire la charge administrative</li>
+          <li>Faciliter le suivi des participants</li>
+        </ul>
+      </div>
 
-            <div>
-              <span className="font-bold text-white">— Résultats obtenus</span>
-              <ul className="list-disc pl-6 space-y-1">
-                <li>Gestion des réservations plus rapide et centralisée</li>
-                <li>Réduction du temps consacré à la saisie manuelle</li>
-                <li>Moins d’erreurs dans le traitement des inscriptions</li>
-                <li>Meilleure organisation interne</li>
-              </ul>
-            </div>
-          </div>
-        ),
-        technologies: ["Booking", "Base de données", "Excel", "Administration", "Gestion des réservations"],
-        date: "01/07/2025 à aujourd'hui",
-        status: "Terminé",
-        icon: Building,
-        color: "from-cyan-600 to-cyan-700",
-      },
-      {
+      <div>
+        <span className="font-bold text-white">— Actions réalisées</span>
+        <ul className="list-disc pl-6 space-y-1">
+          <li>Configuration du service Microsoft Bookings</li>
+          <li>Création des créneaux de réservation</li>
+          <li>Gestion des disponibilités</li>
+          <li>Suivi des inscriptions</li>
+          <li>Aide aux utilisateurs en cas de difficulté</li>
+        </ul>
+      </div>
+
+      <div>
+        <span className="font-bold text-white">— Résultats obtenus</span>
+        <ul className="list-disc pl-6 space-y-1">
+          <li>Gestion des réservations plus rapide</li>
+          <li>Moins d’erreurs dans les inscriptions</li>
+          <li>Gain de temps pour l’association</li>
+          <li>Meilleure organisation des cours</li>
+        </ul>
+      </div>
+    </div>
+  ),
+  technologies: ["Microsoft Bookings", "Microsoft 365", "Excel", "Gestion des réservations"],
+  date: "01/07/2025 à aujourd'hui",
+  status: "Terminé",
+  icon: Building,
+  color: "from-cyan-600 to-cyan-700",
+},
+     {
         title: "Gestion des groupes et des droits d’accès",
         description:
           "Organisation des accès aux ressources selon l’organigramme grâce à des groupes de sécurité Active Directory.",
