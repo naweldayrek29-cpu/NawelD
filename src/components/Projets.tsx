@@ -54,7 +54,6 @@ const Projets = () => {
           "Apache",
           "MariaDB/MySQL",
           "LDAP / Active Directory",
-          "SMTP",
           "GLPI Agent"
         ],
         date: "01/03/2025 à aujourd'hui",
@@ -79,8 +78,8 @@ const Projets = () => {
       {
         title: "Installation d’Artica Proxy",
         description:
-          "Configuration d’un proxy filtrant basé sur Squid : authentification LDAP/AD, filtrage web et gestion avancée des journaux.",
-        technologies: ["Artica Proxy", "Squid", "LDAP/AD", "SSL", "Linux", "GPO"],
+          "Configuration d’un proxy avec filtrage web.",
+        technologies: ["Artica Proxy", "SSL", "Linux", "GPO"],
         date: "01/10/2025 à aujourd'hui",
         status: "Terminé",
         icon: FolderOpen,
@@ -92,7 +91,7 @@ const Projets = () => {
         title: "Déploiement du contrôleur WiFi UniFi",
         description:
           "Installation et configuration d’un contrôleur WiFi UniFi sous Debian avec accès web centralisé pour la gestion du réseau sans fil.",
-        technologies: ["UniFi", "Debian", "Podman", "WiFi", "Réseau"],
+        technologies: ["UniFi", "Debian", "WiFi", "Réseau"],
         date: "01/11/2025 à aujourd'hui",
         status: "Terminé",
         icon: FolderOpen,
@@ -103,8 +102,8 @@ const Projets = () => {
       {
         title: "Installation de XiVO (VoIP)",
         description:
-          "Déploiement d’une solution de téléphonie IP : utilisateurs, trunks SIP, plan de numérotation et tests d’appels.",
-        technologies: ["XiVO", "SIP", "VoIP", "Debian", "Zoiper"],
+          "Déploiement d’une solution de téléphonie IP : utilisateurs",
+        technologies: ["XiVO", "SIP", "Debian", "Zoiper"],
         date: "01/12/2025 à aujourd'hui",
         status: "Terminé",
         icon: FolderOpen,
