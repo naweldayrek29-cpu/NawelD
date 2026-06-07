@@ -33,6 +33,31 @@ const Projets = () => {
   const projets: Record<Category, Projet[]> = {
     scolaire: [
       {
+  title: "Mise en place d'un Active Directory",
+  description:
+    "Installation et configuration d’un contrôleur de domaine Active Directory avec gestion centralisée des utilisateurs, groupes et stratégies.",
+  technologies: ["Windows Server", "Active Directory", "DNS", "GPO"],
+  date: "01/02/2025 au 15/02/2025",
+  status: "Terminé",
+  icon: FolderOpen,
+  color: "from-sky-600 to-sky-700",
+  download: import.meta.env.BASE_URL + "Active_Directory.pdf",
+  view: import.meta.env.BASE_URL + "Active_Directory.pdf",
+},
+
+{
+  title: "Configuration du routeur Zyxel",
+  description:
+    "Configuration et sécurisation d’un routeur Zyxel avec gestion du DHCP, du routage et des accès réseau.",
+  technologies: ["Zyxel", "DHCP", "Routage", "Réseau"],
+  date: "15/02/2025 au 01/03/2025",
+  status: "Terminé",
+  icon: FolderOpen,
+  color: "from-emerald-600 to-emerald-700",
+  download: import.meta.env.BASE_URL + "tpZyXel.pdf",
+  view: import.meta.env.BASE_URL + "tpZyXel.pdf",
+},
+      {
         title: "Paramétrage Routeur & Switch",
         description:
           "Mise en place de deux VLAN isolés en DHCP afin de segmenter le réseau et renforcer la sécurité.",
