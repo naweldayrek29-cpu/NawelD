@@ -18,22 +18,19 @@ const Hero = () => {
           <h2 className="text-2xl md:text-3xl text-gray-300 mb-4">
             Étudiante BTS SIO - Option SISR
           </h2>
-          <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-            Technicienne informatique en alternance au sein du Grand Bleu
-          </p>
 
           <div className="flex flex-wrap justify-center gap-6 mb-12">
             <div className="flex items-center space-x-2 bg-gray-800/50 px-4 py-2 rounded-full border border-purple-500/30">
               <Network className="text-purple-400" size={20} />
-              <span className="text-gray-300">Administration des Réseaux</span>
+              <span className="text-gray-300">Support informatique</span>
             </div>
             <div className="flex items-center space-x-2 bg-gray-800/50 px-4 py-2 rounded-full border border-purple-500/30">
               <Monitor className="text-purple-400" size={20} />
-              <span className="text-gray-300">Gestion des Systèmes d'Information</span>
+              <span className="text-gray-300">Administration systèmes</span>
             </div>
             <div className="flex items-center space-x-2 bg-gray-800/50 px-4 py-2 rounded-full border border-purple-500/30">
               <Shield className="text-purple-400" size={20} />
-              <span className="text-gray-300">Cybersécurité</span>
+              <span className="text-gray-300">Supervision réseau</span>
             </div>
           </div>
 
