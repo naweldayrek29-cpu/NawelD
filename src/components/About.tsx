@@ -4,7 +4,7 @@ import { User, GraduationCap, Calendar, MapPin, Code, Brain } from 'lucide-react
 const About = () => {
   const parcours = [
     {
-      year: "2024-2025",
+      year: "2025-2026",
       title: "BTS SIO - 2ème année",
       subtitle: "Option SISR - Solutions d'Infrastructure, Systèmes et Réseaux",
       description: "Formation en alternance avec spécialisation en administration systèmes et réseaux",
@@ -12,15 +12,15 @@ const About = () => {
       color: "from-purple-600 to-purple-700"
     },
     {
-      year: "2023-2024",
+      year: "2024-2025",
       title: "BTS SIO - 1ère année",
-      subtitle: "Formation en alternance - Découverte des fondamentaux informatiques",
+      subtitle: "Option SISR - Solutions d'Infrastructure, Systèmes et Réseaux",
       description: "Apprentissage des bases en informatique, réseaux et développement",
       icon: Code,
       color: "from-blue-600 to-blue-700"
     },
     {
-      year: "2023",
+      year: "2023-2024",
       title: "BUT Informatique - 1 ère année ",
       subtitle: "Bachelor universitaire technologique",
       description: "Acquisition des compétences de base en informatique et programmation",
@@ -90,7 +90,7 @@ const About = () => {
                 </div>
                 <div className="flex items-center justify-center space-x-2">
                   <Calendar className="text-purple-400" size={16} />
-                  <span>2ème année - Option SISR</span>
+                  <span>2ème année BTS SIO - Option SISR</span>
                 </div>
               </div>
             </div>
