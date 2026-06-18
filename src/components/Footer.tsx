@@ -10,20 +10,27 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold text-white mb-4">Contact</h3>
             <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Mail className="text-purple-400" size={20} />
-                <span className="text-gray-300">naweldayrek29@gmail.com</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Linkedin className="text-purple-400" size={20} />
-                <span className="text-gray-300">LinkedIn</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Github className="text-purple-400" size={20} />
-                <span className="text-gray-300">GitHub</span>
-              </div>
-            </div>
-          </div>
+          <div className="flex items-center space-x-3">
+  <Mail className="text-purple-400" size={20} />
+  <a
+    href="mailto:naweldayrek29@gmail.com"
+    className="text-gray-300 hover:text-purple-400 transition-colors"
+  >
+    naweldayrek29@gmail.com
+  </a>
+</div>
+
+<div className="flex items-center space-x-3">
+  <Linkedin className="text-purple-400" size={20} />
+  <a
+    href="https://www.linkedin.com/in/nawel-dayrek-18b005288/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-300 hover:text-purple-400 transition-colors"
+  >
+    LinkedIn
+  </a>
+</div>
 
           {/* Quick Links */}
           <div>
