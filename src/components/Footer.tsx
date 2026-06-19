@@ -31,7 +31,8 @@ const Footer = () => {
     LinkedIn
   </a>
 </div>
-
+  </div>
+</div>
           {/* Quick Links */}
           <div>
             <h3 className="text-xl font-bold text-white mb-4">Navigation</h3>

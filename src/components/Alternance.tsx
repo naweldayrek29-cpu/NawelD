@@ -5,46 +5,46 @@ const Alternance = () => {
   const missions = [
     {
       icon: Network,
-      title: "Supervision du Réseau et Gestion du Parc Informatique",
-      description: "Participation à la gestion et à la maintenance des infrastructures informatiques de l’association. Contribution au bon fonctionnement des équipements et à la sécurisation des locaux grâce aux dispositifs de contrôle d’accès.",
+      title: "Support Informatique et Gestion du Parc",
+      description: "Participation à la maintenance du parc informatique et au bon fonctionnement des équipements utilisés au sein de l’association. J’interviens sur l’assistance aux utilisateurs, le suivi du matériel et la gestion de certains équipements liés à la sécurité des locaux.",
       details: [
-        "Gestion et maintenance du parc informatique (ordinateurs, équipements réseau)",
-        "Gestion des caméras de vidéosurveillance",
-        "Administration des accès aux bureaux (badges et reconnaissance faciale)",
-        "Support technique aux utilisateurs"
+        "Support technique auprès des utilisateurs",
+        "Maintenance des postes informatiques et équipements réseau",
+        "Suivi du parc informatique de l’association",
+        "Gestion des accès aux bureaux via badges et reconnaissance faciale"
       ]
     },
     {
       icon: Users,
-      title: "Gestion des Réservations",
-      description: "Administration du système de réservation en ligne pour les activités aquatiques et les cours de natation, notamment durant les périodes de forte affluence. Contribution à l’organisation des plannings et à la communication auprès des usagers.",
+      title: "Gestion des Réservations et Accompagnement Utilisateur",
+      description: "Administration de l’interface de réservation en ligne pour les activités aquatiques, les cours de natation et les formations. Cette mission me permet de contribuer à l’organisation des créneaux, au suivi des inscriptions et à l’accompagnement des usagers.",
       details: [
         "Gestion de l’interface de réservation en ligne",
-        "Suivi et organisation des plannings et créneaux",
-        "Communication avec les clients et accompagnement utilisateur",
-        "Suivi et validation des inscriptions"
+        "Suivi des plannings, créneaux et disponibilités",
+        "Validation et suivi des inscriptions",
+        "Accompagnement des utilisateurs et communication avec les usagers"
       ]
     },
     {
       icon: Globe,
-      title: "Mise à jour et Maintenance du Site Internet",
-      description: "Mise à jour régulière du site internet afin de garantir l’accès aux informations et aux réservations. Intégration des nouveautés concernant les formations proposées et optimisation de l’expérience utilisateur.",
+      title: "Mise à Jour et Maintenance du Site Internet",
+      description: "Participation à la mise à jour du site internet de l’association afin de garantir l’accès aux informations importantes. J’interviens notamment sur l’actualisation des contenus, les informations liées aux formations et l’amélioration de l’expérience utilisateur.",
       details: [
         "Mise à jour des contenus et actualités",
-        "Gestion des créneaux et disponibilités en ligne",
-        "Publication et suivi des informations sur les formations",
-        "Amélioration continue de l’interface utilisateur"
+        "Publication des informations liées aux formations",
+        "Suivi des créneaux et disponibilités en ligne",
+        "Amélioration continue de l’expérience utilisateur"
       ]
     },
     {
       icon: Mail,
       title: "Gestion des Comptes et Adresses Email",
-      description: "Création et administration des adresses email associées au domaine du Grand Bleu pour les apprenants et le personnel, dans le but d’améliorer la communication interne et la sécurité informatique.",
+      description: "Création et administration des adresses email professionnelles associées au domaine du Grand Bleu. Cette mission participe à l’amélioration de la communication interne, à la gestion des comptes utilisateurs et à la sécurisation des accès.",
       details: [
-        "Gestion du domaine et configuration des adresses email",
-        "Création et paramétrage des comptes utilisateurs",
-        "Accompagnement et formation à l’utilisation des comptes",
-        "Mise en place de bonnes pratiques et règles de sécurité"
+        "Création et configuration d’adresses email professionnelles",
+        "Paramétrage des comptes utilisateurs",
+        "Gestion des droits d’accès et des permissions",
+        "Mise en place de bonnes pratiques de sécurité"
       ]
     }
   ];
@@ -63,18 +63,17 @@ const Alternance = () => {
           <div className="flex items-center justify-center space-x-6 mb-6 text-gray-300">
             <div className="flex items-center space-x-2">
               <MapPin className="text-purple-400" size={20} />
-              <span>Activités et formations aquatiques</span>
+              <span>Marseille</span>
             </div>
             <div className="flex items-center space-x-2">
               <Calendar className="text-purple-400" size={20} />
-              <span>Apprentie technicienne informatique</span>
+              <span>Technicienne informatique en alternance | Mars 2025 - Aujourd’hui</span>
             </div>
           </div>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-            Le Grand Bleu est une association et un CFA qui propose des activités nautiques et aquatiques,
-            ainsi que des formations spécialisées aux métiers de l’eau. En tant qu’apprentie technicienne
-            informatique, je participe à la gestion du service informatique au sein du siège afin de contribuer
-            à l’amélioration de la digitalisation de l’association, en accompagnement de son évolution.
+            Dans le cadre de mon BTS SIO option SISR, j’effectue mon alternance au sein de l’Association Le Grand Bleu à Marseille.
+            J’interviens sur différentes missions liées au support informatique, à la gestion des comptes utilisateurs, à la maintenance du parc informatique
+            et à l’accompagnement de la digitalisation de l’association.
           </p>
         </div>
 
