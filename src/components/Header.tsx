@@ -10,12 +10,12 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
 
   const menuItems = [
     { id: 'accueil', label: 'Accueil', href: '#accueil' },
-    { id: 'alternance', label: 'Alternance', href: '#alternance' },
-    { id: 'bts-sio', label: 'BTS SIO', href: '#bts-sio' },
-    { id: 'projets', label: 'Projets', href: '#projets' },
-    { id: 'veilles', label: 'Veilles', href: '#veilles' },
-    { id: 'tcs', label: 'TCS', href: '#tcs' },
     { id: 'about', label: 'À propos', href: '#about' },
+    { id: 'bts-sio', label: 'BTS SIO', href: '#bts-sio' },
+    { id: 'alternance', label: 'Alternance', href: '#alternance' },
+    { id: 'projets', label: 'Projets', href: '#projets' },
+    { id: 'certifications', label: 'Certifications', href: '#certifications' },
+    { id: 'tcs', label: 'Tableau de synthèse', href: '#tcs' },
   ];
 
   const scrollToSection = (href: string) => {
@@ -40,7 +40,9 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
                 key={item.id}
                 onClick={() => scrollToSection(item.href)}
                 className={`relative transition-colors duration-300 hover:text-purple-400 ${
-                  activeSection === item.id ? 'text-purple-400' : 'text-white'
+                  activeSection === item.id
+                    ? 'text-purple-400'
+                    : 'text-white'
                 }`}
               >
                 {item.label}
@@ -69,7 +71,9 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
                   key={item.id}
                   onClick={() => scrollToSection(item.href)}
                   className={`text-left py-2 transition-colors duration-300 hover:text-purple-400 ${
-                    activeSection === item.id ? 'text-purple-400' : 'text-white'
+                    activeSection === item.id
+                      ? 'text-purple-400'
+                      : 'text-white'
                   }`}
                 >
                   {item.label}

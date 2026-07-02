@@ -4,7 +4,7 @@ import Hero from './components/Hero';
 import Alternance from './components/Alternance';
 import BtsSio from './components/BtsSio';
 import Projets from './components/Projets';
-import Veilles from './components/Veilles';
+import Veilles from './components/Certifications';
 import TCS from './components/TCS';
 import About from './components/About';
 import Footer from './components/Footer';

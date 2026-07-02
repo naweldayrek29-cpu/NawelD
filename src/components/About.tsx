@@ -4,61 +4,59 @@ import { User, GraduationCap, Calendar, MapPin, Code, Brain } from 'lucide-react
 const About = () => {
   const parcours = [
     {
-      year: "2025-2026",
-      title: "BTS SIO - 2ème année",
-      subtitle: "Option SISR - Solutions d'Infrastructure, Systèmes et Réseaux",
-      description: "Formation en alternance avec spécialisation en administration systèmes et réseaux",
+      year: "2026-2027",
+      title: "Bachelor Informatique & Cybersécurité",
+      subtitle: "IFC Marseille",
+      description: "Poursuite d’études en administration systèmes, réseaux et cybersécurité",
       icon: GraduationCap,
       color: "from-purple-600 to-purple-700"
     },
     {
-      year: "2024-2025",
-      title: "BTS SIO - 1ère année",
-      subtitle: "Option SISR - Solutions d'Infrastructure, Systèmes et Réseaux",
-      description: "Apprentissage des bases en informatique, réseaux et développement",
+      year: "2024-2026",
+      title: "BTS SIO - Option SISR",
+      subtitle: "Solutions d'Infrastructure, Systèmes et Réseaux",
+      description: "Formation en alternance spécialisée en systèmes, réseaux, virtualisation et cybersécurité",
       icon: Code,
       color: "from-blue-600 to-blue-700"
     },
     {
       year: "2023-2024",
-      title: "BUT Informatique - 1 ère année ",
+      title: "BUT Informatique - 1ère année",
       subtitle: "Bachelor universitaire technologique",
-      description: "Acquisition des compétences de base en informatique et programmation",
+      description: "Acquisition des bases en algorithmique, programmation et développement",
       icon: Brain,
       color: "from-green-600 to-green-700"
     },
     {
       year: "2020-2023",
       title: "Baccalauréat Général",
-      subtitle: "Spécialités Mathématiques et Informatique",
-      description: "Formation générale avec orientation scientifique et technologique",
+      subtitle: "Spécialités Mathématiques et NSI",
+      description: "Formation générale avec spécialisation en informatique et sciences numériques",
       icon: GraduationCap,
       color: "from-orange-600 to-orange-700"
     }
   ];
 
   const competencesTechniques = [
-  "Administration Windows Server / Linux",
-  "Configuration et maintenance réseaux",
-  "Supervision systèmes (Zabbix)",
-  "Gestion Active Directory",
-  "Virtualisation (Proxmox, Hyper-V)",
-  "Gestion de tickets (GLPI)",
-  "Proxy / messagerie (Artica)",
-  "Téléphonie IP (XiVO)",
-  "Contrôleur WiFi (Unifi)"
-];
-
+    "Windows Server / Linux",
+    "Active Directory / GPO",
+    "DNS / DHCP",
+    "VLAN / VPN / Routage",
+    "Proxmox / Hyper-V / VMware",
+    "Microsoft 365",
+    "Odoo / UniFi",
+    "PowerShell"
+  ];
 
   const competencesPersonnelles = [
-    "Travail en équipe",
-    "Communication client",
-    "Résolution de problèmes",
-    "Autonomie et initiative",
-    "Gestion du stress",
-    "Adaptabilité",
+    "Rigueur",
+    "Autonomie",
+    "Esprit d’équipe",
     "Sens du service",
-    "Organisation et méthode"
+    "Communication utilisateur",
+    "Résolution d’incidents",
+    "Organisation",
+    "Curiosité technique"
   ];
 
   return (
@@ -70,48 +68,53 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white">À Propos de Moi</h2>
           </div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Découvrez mon parcours, mes compétences et ma passion pour l'informatique
+            Découvrez mon parcours, mes compétences et mon évolution dans les métiers de l’informatique.
           </p>
         </div>
 
         {/* Profile Section */}
-        <div className="grid lg:grid-cols-3 gap-12 mb-16">
-          <div className="lg:col-span-1">
-            <div className="bg-gradient-to-br from-gray-800/50 to-gray-700/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8 text-center">
-              <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-purple-600 to-purple-700 rounded-full flex items-center justify-center">
-                <User className="text-white" size={64} />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Étudiant BTS SIO</h3>
-              <p className="text-purple-400 font-semibold mb-4">19 ans</p>
-              <div className="space-y-2 text-gray-300">
-                <div className="flex items-center justify-center space-x-2">
-                  <MapPin className="text-purple-400" size={16} />
-                  <span>Le Grand Bleu - Alternance</span>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <Calendar className="text-purple-400" size={16} />
-                  <span>2ème année BTS SIO - Option SISR</span>
-                </div>
-              </div>
-            </div>
-          </div>
+<div className="grid lg:grid-cols-3 gap-12 mb-16">
+  <div className="lg:col-span-1">
+    <div className="bg-gradient-to-br from-gray-800/50 to-gray-700/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8 text-center">
+      <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-purple-600 to-purple-700 rounded-full flex items-center justify-center">
+        <User className="text-white" size={64} />
+      </div>
+
+      <h3 className="text-2xl font-bold text-white mb-2">
+        Technicienne Support Informatique
+      </h3>
+
+      <p className="text-purple-400 font-semibold mb-4">
+        20 ans
+      </p>
+
+      <div className="space-y-2 text-gray-300">
+        <div className="flex items-center justify-center space-x-2">
+          <MapPin className="text-purple-400" size={16} />
+          <span>Étudiante Bachelor Informatique & Cybersécurité - IFC Marseille</span>
+        </div>
+
+        <div className="flex items-center justify-center space-x-2">
+          <Calendar className="text-purple-400" size={16} />
+          <span>Recherche d'alternance • Septembre 2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
           <div className="lg:col-span-2">
             <div className="bg-gradient-to-br from-gray-800/50 to-gray-700/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-white mb-6">Mon Profil</h3>
               <p className="text-gray-300 leading-relaxed mb-6">
-                Passionnée par l'informatique depuis le lycée où j'ai choisi les spécialités Mathématiques et Informatique, 
-                j'ai poursuivi mes études avec un BUT Informatique en 2023. Actuellement en 2ème année de BTS SIO option SISR, 
-                je me spécialise dans l'administration des systèmes et réseaux.
-              </p>
-              <p className="text-gray-300 leading-relaxed mb-6">
-                Mon alternance au sein de l'association Le Grand Bleu me permet d'appliquer mes connaissances théoriques 
-                dans un environnement professionnel concret. J'y développe mes compétences en administration réseau, 
-                gestion de services web et support utilisateur.
+                Titulaire d'un BTS SIO (option SISR), j'ai acquis une première expérience professionnelle grâce à mon alternance
+                au sein du siège de l'Association Le Grand Bleu. J'y suis intervenue sur des missions de support informatique,
+                d'administration systèmes, de gestion des comptes utilisateurs, de maintenance du parc informatique et
+                d'accompagnement des utilisateurs.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Mon objectif est de devenir une experte en infrastructure informatique, capable de concevoir, 
-                déployer et maintenir des solutions techniques robustes et sécurisées.
+                À la rentrée 2026, j'intégrerai un Bachelor Informatique & Cybersécurité afin d'approfondir mes compétences
+                en infrastructures systèmes, réseaux et cybersécurité. Je suis actuellement à la recherche d'une alternance
+                pour poursuivre cette évolution professionnelle.
               </p>
             </div>
           </div>
@@ -184,18 +187,27 @@ const About = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="mt-12 text-center bg-gradient-to-r from-purple-600/10 to-purple-800/10 border border-purple-500/20 rounded-xl p-8">
-          <User className="text-purple-400 mx-auto mb-4" size={48} />
-          <h3 className="text-2xl font-bold text-white mb-4">Contactez-moi</h3>
-          <p className="text-gray-300 max-w-2xl mx-auto mb-6">
-            Intéressé par mon profil ? N'hésitez pas à me contacter pour discuter de mes projets, 
-            de mon parcours ou d'opportunités de collaboration.
-          </p>
-          <button className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 text-white">
-            Me Contacter
-          </button>
-        </div>
+{/* Call to Action */}
+<div className="mt-12 text-center bg-gradient-to-r from-purple-600/10 to-purple-800/10 border border-purple-500/20 rounded-xl p-8">
+  <User className="text-purple-400 mx-auto mb-4" size={48} />
+
+  <h3 className="text-2xl font-bold text-white mb-4">
+    Télécharger mon CV
+  </h3>
+
+  <p className="text-gray-300 max-w-2xl mx-auto mb-6">
+    Vous recherchez une alternante en administration systèmes et réseaux, support informatique
+    ou cybersécurité ? Consultez mon CV pour découvrir mon parcours, mes compétences et mes projets.
+  </p>
+
+  <a
+    href={import.meta.env.BASE_URL + "CV_DAYREK_Portfolio.pdf"}
+    download="CV_DAYREK_Nawel.pdf"
+    className="inline-block bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 text-white"
+  >
+    Télécharger mon CV
+  </a>
+</div>
       </div>
     </section>
   );
