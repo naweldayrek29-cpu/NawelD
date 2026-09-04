@@ -1,88 +1,289 @@
-import React from 'react';
-import { GraduationCap, Network, Database, Shield } from 'lucide-react';
+import React from "react";
+import {
+  GraduationCap,
+  ArrowUp,
+  BookOpen,
+  Code2,
+  Network,
+  ShieldCheck,
+  LucideIcon,
+} from "lucide-react";
+
+type Formation = {
+  period: string;
+  title: string;
+  school: string;
+  description: string;
+  skills: string[];
+  icon: LucideIcon;
+  current?: boolean;
+};
 
 const BtsSio = () => {
-  const current = {
-    title: "SISR — Solutions d’Infrastructure, Systèmes et Réseaux",
-    description:
-      "L’option SISR m’a permis d’acquérir des compétences en administration des systèmes et réseaux, en virtualisation, en sécurité informatique ainsi qu’en support utilisateur. Cette formation m’a préparée à concevoir, déployer et maintenir des infrastructures informatiques professionnelles.",
-    competences: [
-      "Windows Server • Linux • Active Directory",
-      "DNS • DHCP • GPO • Exchange",
-      "TCP/IP • VLAN • Routage • VPN",
-      "Proxmox • Hyper-V • VMware",
-      "GLPI • XIVO • FOG",
-      "PowerShell • ZEVENET • Artica Proxy",
-      "UniFi • Cisco Packet Tracer",
-      "Support informatique • Documentation technique"
-    ],
-    icon: Network
-  };
+  const formations: Formation[] = [
+    {
+      period: "2020 — 2023",
+      title: "Baccalauréat Général",
+      school: "Spécialités Mathématiques & NSI",
+      description:
+        "Mes premières bases solides en informatique grâce à la spécialité Numérique et Sciences Informatiques, complétées par les mathématiques.",
+      skills: [
+        "NSI",
+        "Algorithmique",
+        "Programmation",
+        "Mathématiques",
+      ],
+      icon: BookOpen,
+    },
 
-  const Icon = current.icon;
+    {
+      period: "2023 — 2024",
+      title: "BUT Informatique",
+      school: "1ère année",
+      description:
+        "Une première année qui m’a permis d’acquérir des bases solides en programmation, bases de données, systèmes et réseaux, tout en découvrant plusieurs outils et technologies utilisés en environnement informatique.",
+      skills: [
+        "SQL",
+        "Cisco Packet Tracer",
+        "TCP/IP",
+        "DHCP",
+        "Linux",
+        "Programmation",
+      ],
+      icon: Code2,
+    },
+
+    {
+      period: "2024 — 2026",
+      title: "BTS SIO — Option SISR",
+      school: "ENSITECH Marseille",
+      description:
+        "Une formation orientée systèmes et réseaux qui m’a permis de développer des compétences concrètes en administration, virtualisation, infrastructures réseau, sécurité et support informatique.",
+      skills: [
+        "Windows Server",
+        "Active Directory",
+        "DNS / DHCP",
+        "VLAN",
+        "Virtualisation",
+        "Cybersécurité",
+      ],
+      icon: Network,
+    },
+
+    {
+      period: "2026 — 2027",
+      title: "Bachelor Chef de Projet Réseau & Sécurité Informatique",
+      school: "IFC Marseille",
+      description:
+        "Je poursuis aujourd’hui ma spécialisation afin d’approfondir mes compétences en réseaux, sécurité informatique, administration des infrastructures et gestion de projets techniques.",
+      skills: [
+        "Réseaux",
+        "Cybersécurité",
+        "Administration",
+        "Gestion de projet",
+      ],
+      icon: ShieldCheck,
+      current: true,
+    },
+  ];
 
   return (
-    <section id="bts-sio" className="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
-      <div className="container mx-auto px-6">
-        {/* En-tête */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center space-x-3 mb-6">
-            <GraduationCap className="text-purple-400" size={32} />
-            <h2 className="text-4xl md:text-5xl font-bold text-white">BTS SIO</h2>
-          </div>
+    <section
+      id="bts-sio"
+      className="relative py-24 bg-gradient-to-b from-gray-900 to-gray-800 overflow-hidden"
+    >
+      {/* EFFET DE FOND */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-purple-600/5 rounded-full blur-3xl pointer-events-none" />
 
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Le BTS Services Informatiques aux Organisations forme des professionnels de l'informatique capables
-            d'administrer, sécuriser et maintenir des infrastructures systèmes et réseaux. J'ai choisi
-            l'option <span className="text-white font-semibold">SISR</span> afin de me spécialiser dans
-            l'administration des systèmes, des réseaux et la cybersécurité.
+      <div className="container relative mx-auto px-6">
+
+        {/* EN-TÊTE */}
+        <div className="text-center mb-20">
+
+          <span className="inline-flex items-center gap-2 px-4 py-2 mb-5 text-sm font-medium text-purple-300 bg-purple-500/10 border border-purple-500/20 rounded-full">
+            <GraduationCap size={17} />
+            Formation & évolution
+          </span>
+
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-5">
+            Mon parcours
+          </h2>
+
+          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            De mes premières bases en informatique à ma spécialisation en
+            systèmes, réseaux et cybersécurité.
           </p>
         </div>
 
-        {/* Contenu : explication puis compétences acquises */}
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Explication de l’option */}
-          <div className="bg-gradient-to-br from-gray-800/50 to-gray-700/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8">
-            <div className="flex items-center space-x-3 mb-6">
-              <Icon className="text-purple-400" size={28} />
-              <h3 className="text-2xl font-bold text-white">{current.title}</h3>
+        {/* TIMELINE */}
+        <div className="relative max-w-6xl mx-auto">
+
+          {/* LIGNE CENTRALE DESKTOP */}
+          <div className="hidden md:block absolute left-1/2 top-8 bottom-0 w-px -translate-x-1/2 bg-gradient-to-b from-purple-400 via-purple-500/60 to-purple-500/10" />
+
+          {/* LIGNE MOBILE */}
+          <div className="md:hidden absolute left-[19px] top-8 bottom-0 w-px bg-gradient-to-b from-purple-400 via-purple-500/60 to-purple-500/10" />
+
+          {/* FLÈCHE VERS LE HAUT */}
+          <div className="relative flex md:justify-center justify-start mb-12">
+            <div className="relative z-10 w-10 h-10 rounded-full bg-purple-600 border-4 border-gray-900 flex items-center justify-center shadow-lg shadow-purple-500/30">
+              <ArrowUp className="text-white" size={20} />
+            </div>
+          </div>
+
+          {/* FORMATIONS */}
+          <div className="space-y-12 md:space-y-16">
+            {[...formations].reverse().map((formation, index) => {
+              const Icon = formation.icon;
+              const isLeft = index % 2 === 0;
+
+              return (
+                <div
+                  key={formation.title}
+                  className="relative grid md:grid-cols-2 md:gap-16"
+                >
+
+                  {/* POINT CENTRAL DESKTOP */}
+                  <div className="hidden md:flex absolute left-1/2 top-8 -translate-x-1/2 z-20">
+                    <div
+                      className={`w-5 h-5 rounded-full border-4 border-gray-900 transition-all duration-300 ${
+                        formation.current
+                          ? "bg-purple-400 shadow-lg shadow-purple-500/60"
+                          : "bg-purple-600"
+                      }`}
+                    />
+                  </div>
+
+                  {/* POINT MOBILE */}
+                  <div className="md:hidden absolute left-[10px] top-8 z-20">
+                    <div
+                      className={`w-5 h-5 rounded-full border-4 border-gray-900 ${
+                        formation.current
+                          ? "bg-purple-400 shadow-lg shadow-purple-500/60"
+                          : "bg-purple-600"
+                      }`}
+                    />
+                  </div>
+
+                  {/* CARTE */}
+                  <div
+                    className={`${
+                      isLeft ? "md:col-start-1" : "md:col-start-2"
+                    } ml-12 md:ml-0`}
+                  >
+                    <div
+                      className="
+                        group
+                        relative
+                        bg-gradient-to-br
+                        from-gray-800/80
+                        to-gray-900/80
+                        backdrop-blur-sm
+                        border
+                        border-purple-500/20
+                        rounded-2xl
+                        p-6
+                        md:p-7
+                        hover:border-purple-400/50
+                        hover:-translate-y-1
+                        transition-all
+                        duration-300
+                      "
+                    >
+
+                      {/* FORMATION ACTUELLE */}
+                      {formation.current && (
+                        <div className="absolute -top-3 right-5">
+                          <span className="px-3 py-1 text-xs font-semibold text-purple-200 bg-purple-600 border border-purple-400/30 rounded-full shadow-lg shadow-purple-500/10">
+                            Formation actuelle
+                          </span>
+                        </div>
+                      )}
+
+                      {/* DATE */}
+                      <div className="mb-4">
+                        <span className="text-sm font-semibold tracking-wide text-purple-400">
+                          {formation.period}
+                        </span>
+                      </div>
+
+                      {/* ICON + TITRE */}
+                      <div className="flex items-start gap-4 mb-5">
+
+                        <div className="w-12 h-12 flex-shrink-0 bg-purple-500/10 border border-purple-500/20 rounded-xl flex items-center justify-center group-hover:bg-purple-500/20 transition-colors duration-300">
+                          <Icon
+                            className="text-purple-400"
+                            size={25}
+                          />
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl md:text-2xl font-bold text-white mb-1">
+                            {formation.title}
+                          </h3>
+
+                          <p className="text-purple-300 text-sm font-medium">
+                            {formation.school}
+                          </p>
+                        </div>
+
+                      </div>
+
+                      {/* DESCRIPTION */}
+                      <p className="text-gray-300 leading-relaxed text-sm md:text-base mb-6">
+                        {formation.description}
+                      </p>
+
+                      {/* BADGES */}
+                      <div className="flex flex-wrap gap-2">
+                        {formation.skills.map((skill) => (
+                          <span
+                            key={skill}
+                            className="px-3 py-1.5 text-xs text-gray-300 bg-gray-800/80 border border-purple-500/20 rounded-full hover:text-purple-300 hover:border-purple-500/40 transition-colors"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              );
+            })}
+          </div>
+
+        </div>
+
+        {/* MESSAGE FINAL */}
+        <div className="mt-24 max-w-4xl mx-auto">
+
+          <div className="relative overflow-hidden bg-gradient-to-r from-purple-600/10 via-purple-500/5 to-purple-800/10 border border-purple-500/20 rounded-2xl p-8 md:p-10 text-center">
+
+            <div className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
+              <ShieldCheck
+                className="text-purple-400"
+                size={29}
+              />
             </div>
 
-            <p className="text-gray-300 leading-relaxed">
-              {current.description}
-            </p>
-          </div>
-
-          {/* Compétences acquises */}
-          <div className="bg-gradient-to-br from-gray-800/50 to-gray-700/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
-              <Database className="text-purple-400 mr-3" size={28} />
-              Compétences acquises durant la formation
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Une spécialisation qui s’est construite progressivement
             </h3>
 
-            <ul className="space-y-3">
-              {current.competences.map((competence, i) => (
-                <li key={i} className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-300">{competence}</span>
-                </li>
-              ))}
-            </ul>
+            <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed">
+              Au fil de mon parcours, je me suis progressivement orientée vers
+              les systèmes, les réseaux et la cybersécurité. Mon objectif est de
+              poursuivre mes études jusqu’au Master afin de renforcer mes
+              compétences techniques et évoluer vers des missions à plus fortes
+              responsabilités dans le domaine de l’IT.
+            </p>
+
           </div>
+
         </div>
 
-        {/* Mon Parcours */}
-        <div className="mt-16 text-center bg-gradient-to-r from-purple-600/10 to-purple-800/10 border border-purple-500/20 rounded-xl p-8">
-          <Shield className="text-purple-400 mx-auto mb-4" size={48} />
-          <h3 className="text-2xl font-bold text-white mb-4">Mon Parcours</h3>
-
-          <p className="text-gray-300 max-w-3xl mx-auto">
-            Titulaire du <span className="text-white font-semibold">BTS Services Informatiques aux Organisations (option SISR)</span>,
-            je poursuis mon parcours en Bachelor Informatique et Cybersécurité. Cette formation m'a permis de développer
-            des compétences solides en administration systèmes, réseaux, virtualisation, sécurité informatique
-            et support technique.
-          </p>
-        </div>
       </div>
     </section>
   );
