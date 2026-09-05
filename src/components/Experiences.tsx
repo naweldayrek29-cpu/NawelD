@@ -11,7 +11,7 @@ import {
   Server,
   ShieldCheck,
   Wrench,
-  LucideIcon,
+  type LucideIcon,
 } from "lucide-react";
 
 type Mission = {
@@ -36,7 +36,7 @@ type Skill = {
   items: string[];
 };
 
-const Alternance = () => {
+const Experiences = () => {
   const [openExperience, setOpenExperience] = useState<number | null>(0);
 
   const experiences: Experience[] = [
@@ -61,6 +61,7 @@ const Alternance = () => {
             "Accompagnement des utilisateurs dans l’utilisation des outils numériques",
           ],
         },
+
         {
           icon: Users,
           title: "Administration des Comptes et Accès",
@@ -73,6 +74,7 @@ const Alternance = () => {
             "Gestion des accès utilisateurs selon leurs besoins",
           ],
         },
+
         {
           icon: Globe,
           title: "Infrastructure Systèmes et Réseaux",
@@ -85,6 +87,7 @@ const Alternance = () => {
             "Participation au maintien du bon fonctionnement de l’infrastructure",
           ],
         },
+
         {
           icon: Mail,
           title: "Outils, Sécurité et Documentation",
@@ -131,6 +134,7 @@ const Alternance = () => {
             "Installation et configuration de points d’accès Wi-Fi",
           ],
         },
+
         {
           icon: Users,
           title: "Administration Système",
@@ -140,6 +144,7 @@ const Alternance = () => {
             "Vérification et maintenance des postes informatiques",
           ],
         },
+
         {
           icon: Wrench,
           title: "Maintenance Matérielle",
@@ -181,6 +186,7 @@ const Alternance = () => {
             "Vérification du bon fonctionnement des équipements",
           ],
         },
+
         {
           icon: Users,
           title: "Préparation des Postes",
@@ -191,6 +197,7 @@ const Alternance = () => {
             "Préparation des environnements utilisateurs",
           ],
         },
+
         {
           icon: Server,
           title: "Sauvegarde et Administration",
@@ -224,6 +231,7 @@ const Alternance = () => {
         "Linux",
       ],
     },
+
     {
       icon: Network,
       title: "Réseaux",
@@ -237,6 +245,7 @@ const Alternance = () => {
         "UniFi",
       ],
     },
+
     {
       icon: Users,
       title: "Administration & Support",
@@ -248,6 +257,7 @@ const Alternance = () => {
         "Odoo",
       ],
     },
+
     {
       icon: ShieldCheck,
       title: "Outils & Sécurité",
@@ -267,13 +277,14 @@ const Alternance = () => {
 
   return (
     <section
-      id="alternance"
+      id="experiences"
       className="py-20 bg-gradient-to-b from-gray-800 to-gray-900"
     >
       <div className="container mx-auto px-6">
 
         {/* TITRE */}
         <div className="text-center mb-16">
+
           <span className="inline-block px-4 py-2 mb-4 text-sm font-medium text-purple-300 bg-purple-500/10 border border-purple-500/20 rounded-full">
             Mon parcours professionnel
           </span>
@@ -287,10 +298,12 @@ const Alternance = () => {
             compétences en support informatique, systèmes, réseaux et
             maintenance.
           </p>
+
         </div>
 
         {/* EXPERIENCES */}
         <div className="space-y-8 mb-20">
+
           {experiences.map((experience, index) => {
             const isOpen = openExperience === index;
 
@@ -299,6 +312,7 @@ const Alternance = () => {
                 key={index}
                 className="bg-gradient-to-br from-gray-800/60 to-gray-900/70 backdrop-blur-sm border border-purple-500/20 rounded-2xl overflow-hidden hover:border-purple-500/40 transition-all duration-300"
               >
+
                 <button
                   type="button"
                   onClick={() => toggleExperience(index)}
@@ -307,11 +321,16 @@ const Alternance = () => {
                   <div className="flex items-start justify-between gap-6">
 
                     <div className="flex items-start gap-4">
+
                       <div className="bg-gradient-to-br from-purple-600 to-purple-700 p-3 rounded-xl flex-shrink-0">
-                        <Building2 className="text-white" size={26} />
+                        <Building2
+                          className="text-white"
+                          size={26}
+                        />
                       </div>
 
                       <div>
+
                         <h3 className="text-2xl md:text-3xl text-purple-400 font-bold mb-2">
                           {experience.company}
                         </h3>
@@ -321,12 +340,16 @@ const Alternance = () => {
                         </p>
 
                         <div className="flex flex-wrap gap-4 text-gray-300 text-sm mb-4">
+
                           <div className="flex items-center gap-2">
                             <MapPin
                               className="text-purple-400"
                               size={18}
                             />
-                            <span>{experience.location}</span>
+
+                            <span>
+                              {experience.location}
+                            </span>
                           </div>
 
                           <div className="flex items-center gap-2">
@@ -334,8 +357,12 @@ const Alternance = () => {
                               className="text-purple-400"
                               size={18}
                             />
-                            <span>{experience.date}</span>
+
+                            <span>
+                              {experience.date}
+                            </span>
                           </div>
+
                         </div>
 
                         <p className="text-gray-300 max-w-4xl leading-relaxed">
@@ -347,7 +374,9 @@ const Alternance = () => {
                             ? "Réduire les détails"
                             : "Voir les missions en détail"}
                         </p>
+
                       </div>
+
                     </div>
 
                     <ChevronDown
@@ -356,6 +385,7 @@ const Alternance = () => {
                       }`}
                       size={28}
                     />
+
                   </div>
                 </button>
 
@@ -368,6 +398,7 @@ const Alternance = () => {
                   }`}
                 >
                   <div className="px-6 md:px-8 pb-8">
+
                     <div className="border-t border-purple-500/20 pt-8">
 
                       <h4 className="text-xl font-bold text-white mb-8">
@@ -375,6 +406,7 @@ const Alternance = () => {
                       </h4>
 
                       <div className="grid md:grid-cols-2 gap-6">
+
                         {experience.missions.map(
                           (mission, missionIndex) => {
                             const MissionIcon = mission.icon;
@@ -394,18 +426,20 @@ const Alternance = () => {
                                   </div>
 
                                   <div className="flex-1">
+
                                     <h5 className="text-lg font-semibold text-white mb-5">
                                       {mission.title}
                                     </h5>
 
                                     <div className="space-y-3">
+
                                       {mission.details.map(
                                         (detail, detailIndex) => (
                                           <div
                                             key={detailIndex}
                                             className="flex items-start gap-2"
                                           >
-                                            <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                                            <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0" />
 
                                             <span className="text-gray-300 text-sm leading-relaxed">
                                               {detail}
@@ -413,22 +447,28 @@ const Alternance = () => {
                                           </div>
                                         )
                                       )}
+
                                     </div>
+
                                   </div>
+
                                 </div>
                               </div>
                             );
                           }
                         )}
+
                       </div>
 
                       {/* ENVIRONNEMENT TECHNIQUE */}
                       <div className="mt-10">
+
                         <h4 className="text-xl font-bold text-white mb-5">
                           Environnement technique
                         </h4>
 
                         <div className="flex flex-wrap gap-3">
+
                           {experience.tools.map((tool, toolIndex) => (
                             <span
                               key={toolIndex}
@@ -437,21 +477,27 @@ const Alternance = () => {
                               {tool}
                             </span>
                           ))}
+
                         </div>
+
                       </div>
 
                     </div>
+
                   </div>
                 </div>
+
               </div>
             );
           })}
+
         </div>
 
         {/* COMPETENCES */}
         <div className="mt-20">
 
           <div className="text-center mb-12">
+
             <span className="inline-block px-4 py-2 mb-4 text-sm font-medium text-purple-300 bg-purple-500/10 border border-purple-500/20 rounded-full">
               Environnement technique
             </span>
@@ -464,9 +510,11 @@ const Alternance = () => {
               Les technologies et outils que j’utilise dans mes expériences
               professionnelles et mes projets techniques.
             </p>
+
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
             {skills.map((skill, index) => {
               const SkillIcon = skill.icon;
 
@@ -475,6 +523,7 @@ const Alternance = () => {
                   key={index}
                   className="group bg-gradient-to-br from-gray-800/70 to-gray-900/70 border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/50 hover:-translate-y-1 transition-all duration-300"
                 >
+
                   <div className="w-12 h-12 bg-purple-500/10 border border-purple-500/20 rounded-xl flex items-center justify-center mb-5">
                     <SkillIcon
                       className="text-purple-400"
@@ -487,6 +536,7 @@ const Alternance = () => {
                   </h4>
 
                   <div className="flex flex-wrap gap-2">
+
                     {skill.items.map((item, itemIndex) => (
                       <span
                         key={itemIndex}
@@ -495,11 +545,15 @@ const Alternance = () => {
                         {item}
                       </span>
                     ))}
+
                   </div>
+
                 </div>
               );
             })}
+
           </div>
+
         </div>
 
       </div>
@@ -507,4 +561,4 @@ const Alternance = () => {
   );
 };
 
-export default Alternance;
+export default Experiences;

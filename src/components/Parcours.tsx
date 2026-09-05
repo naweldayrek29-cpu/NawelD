@@ -6,7 +6,7 @@ import {
   Code2,
   Network,
   ShieldCheck,
-  LucideIcon,
+  type LucideIcon,
 } from "lucide-react";
 
 type Formation = {
@@ -19,7 +19,7 @@ type Formation = {
   current?: boolean;
 };
 
-const BtsSio = () => {
+const Parcours = () => {
   const formations: Formation[] = [
     {
       period: "2020 — 2023",
@@ -89,17 +89,13 @@ const BtsSio = () => {
 
   return (
     <section
-      id="bts-sio"
+      id="parcours"
       className="relative py-24 bg-gradient-to-b from-gray-900 to-gray-800 overflow-hidden"
     >
-      {/* EFFET DE FOND */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-purple-600/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container relative mx-auto px-6">
-
-        {/* EN-TÊTE */}
         <div className="text-center mb-20">
-
           <span className="inline-flex items-center gap-2 px-4 py-2 mb-5 text-sm font-medium text-purple-300 bg-purple-500/10 border border-purple-500/20 rounded-full">
             <GraduationCap size={17} />
             Formation & évolution
@@ -115,23 +111,17 @@ const BtsSio = () => {
           </p>
         </div>
 
-        {/* TIMELINE */}
         <div className="relative max-w-6xl mx-auto">
-
-          {/* LIGNE CENTRALE DESKTOP */}
           <div className="hidden md:block absolute left-1/2 top-8 bottom-0 w-px -translate-x-1/2 bg-gradient-to-b from-purple-400 via-purple-500/60 to-purple-500/10" />
 
-          {/* LIGNE MOBILE */}
           <div className="md:hidden absolute left-[19px] top-8 bottom-0 w-px bg-gradient-to-b from-purple-400 via-purple-500/60 to-purple-500/10" />
 
-          {/* FLÈCHE VERS LE HAUT */}
           <div className="relative flex md:justify-center justify-start mb-12">
             <div className="relative z-10 w-10 h-10 rounded-full bg-purple-600 border-4 border-gray-900 flex items-center justify-center shadow-lg shadow-purple-500/30">
               <ArrowUp className="text-white" size={20} />
             </div>
           </div>
 
-          {/* FORMATIONS */}
           <div className="space-y-12 md:space-y-16">
             {[...formations].reverse().map((formation, index) => {
               const Icon = formation.icon;
@@ -142,8 +132,6 @@ const BtsSio = () => {
                   key={formation.title}
                   className="relative grid md:grid-cols-2 md:gap-16"
                 >
-
-                  {/* POINT CENTRAL DESKTOP */}
                   <div className="hidden md:flex absolute left-1/2 top-8 -translate-x-1/2 z-20">
                     <div
                       className={`w-5 h-5 rounded-full border-4 border-gray-900 transition-all duration-300 ${
@@ -154,7 +142,6 @@ const BtsSio = () => {
                     />
                   </div>
 
-                  {/* POINT MOBILE */}
                   <div className="md:hidden absolute left-[10px] top-8 z-20">
                     <div
                       className={`w-5 h-5 rounded-full border-4 border-gray-900 ${
@@ -165,33 +152,12 @@ const BtsSio = () => {
                     />
                   </div>
 
-                  {/* CARTE */}
                   <div
                     className={`${
                       isLeft ? "md:col-start-1" : "md:col-start-2"
                     } ml-12 md:ml-0`}
                   >
-                    <div
-                      className="
-                        group
-                        relative
-                        bg-gradient-to-br
-                        from-gray-800/80
-                        to-gray-900/80
-                        backdrop-blur-sm
-                        border
-                        border-purple-500/20
-                        rounded-2xl
-                        p-6
-                        md:p-7
-                        hover:border-purple-400/50
-                        hover:-translate-y-1
-                        transition-all
-                        duration-300
-                      "
-                    >
-
-                      {/* FORMATION ACTUELLE */}
+                    <div className="group relative bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-6 md:p-7 hover:border-purple-400/50 hover:-translate-y-1 transition-all duration-300">
                       {formation.current && (
                         <div className="absolute -top-3 right-5">
                           <span className="px-3 py-1 text-xs font-semibold text-purple-200 bg-purple-600 border border-purple-400/30 rounded-full shadow-lg shadow-purple-500/10">
@@ -200,16 +166,13 @@ const BtsSio = () => {
                         </div>
                       )}
 
-                      {/* DATE */}
                       <div className="mb-4">
                         <span className="text-sm font-semibold tracking-wide text-purple-400">
                           {formation.period}
                         </span>
                       </div>
 
-                      {/* ICON + TITRE */}
                       <div className="flex items-start gap-4 mb-5">
-
                         <div className="w-12 h-12 flex-shrink-0 bg-purple-500/10 border border-purple-500/20 rounded-xl flex items-center justify-center group-hover:bg-purple-500/20 transition-colors duration-300">
                           <Icon
                             className="text-purple-400"
@@ -226,15 +189,12 @@ const BtsSio = () => {
                             {formation.school}
                           </p>
                         </div>
-
                       </div>
 
-                      {/* DESCRIPTION */}
                       <p className="text-gray-300 leading-relaxed text-sm md:text-base mb-6">
                         {formation.description}
                       </p>
 
-                      {/* BADGES */}
                       <div className="flex flex-wrap gap-2">
                         {formation.skills.map((skill) => (
                           <span
@@ -245,22 +205,16 @@ const BtsSio = () => {
                           </span>
                         ))}
                       </div>
-
                     </div>
                   </div>
-
                 </div>
               );
             })}
           </div>
-
         </div>
 
-        {/* MESSAGE FINAL */}
         <div className="mt-24 max-w-4xl mx-auto">
-
           <div className="relative overflow-hidden bg-gradient-to-r from-purple-600/10 via-purple-500/5 to-purple-800/10 border border-purple-500/20 rounded-2xl p-8 md:p-10 text-center">
-
             <div className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
               <ShieldCheck
                 className="text-purple-400"
@@ -279,14 +233,11 @@ const BtsSio = () => {
               compétences techniques et évoluer vers des missions à plus fortes
               responsabilités dans le domaine de l’IT.
             </p>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );
 };
 
-export default BtsSio;
+export default Parcours;
