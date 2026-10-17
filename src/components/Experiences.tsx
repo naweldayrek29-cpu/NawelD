@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Building2,
   Network,
-  Globe,
-  Mail,
   Users,
   Calendar,
   MapPin,
@@ -11,6 +9,11 @@ import {
   Server,
   ShieldCheck,
   Wrench,
+  Briefcase,
+  Monitor,
+  Cable,
+  Headset,
+  FolderCog,
   type LucideIcon,
 } from "lucide-react";
 
@@ -46,176 +49,46 @@ const Experiences = () => {
       location: "Marseille",
       date: "Mars 2025 - Août 2026",
       description:
-        "Au sein du siège de l'Association Le Grand Bleu, je contribue au bon fonctionnement du système d'information en intervenant sur le support aux utilisateurs, l'administration des postes et des comptes, la maintenance du parc informatique ainsi que sur les infrastructures systèmes, réseaux et les outils de sécurité.",
-
+        "Au sein de l’Association Le Grand Bleu, j’assure le support informatique aux utilisateurs, la préparation des postes Windows ainsi que la gestion des comptes et des accès.",
       missions: [
         {
-          icon: Network,
-          title: "Support IT et Maintenance du Parc",
+          icon: Wrench,
+          title: "Support IT & Maintenance",
           details: [
-            "Assistance technique auprès des utilisateurs",
-            "Diagnostic et résolution d’incidents matériels et logiciels",
-            "Installation, configuration et maintenance des postes Windows",
-            "Suivi et maintenance du parc informatique",
-            "Suivi des équipements réseau",
-            "Accompagnement des utilisateurs dans l’utilisation des outils numériques",
+            "Assistance technique et résolution des incidents utilisateurs",
+            "Installation et configuration des postes Windows",
           ],
         },
-
         {
           icon: Users,
-          title: "Administration des Comptes et Accès",
+          title: "Administration informatique",
           details: [
-            "Création et gestion des comptes utilisateurs",
-            "Administration des droits d’accès et des permissions",
-            "Gestion des adresses email professionnelles",
-            "Administration des comptes Microsoft 365",
-            "Application des bonnes pratiques de sécurité",
-            "Gestion des accès utilisateurs selon leurs besoins",
-          ],
-        },
-
-        {
-          icon: Globe,
-          title: "Infrastructure Systèmes et Réseaux",
-          details: [
-            "Administration Windows Server",
-            "Utilisation d’Active Directory",
-            "Gestion de DNS, DHCP et GPO",
-            "Administration et suivi des bornes Wi-Fi UniFi",
-            "Suivi des équipements réseau",
-            "Participation au maintien du bon fonctionnement de l’infrastructure",
-          ],
-        },
-
-        {
-          icon: Mail,
-          title: "Outils, Sécurité et Documentation",
-          details: [
-            "Suivi des demandes et incidents avec Odoo",
-            "Gestion des accès via badges et reconnaissance faciale",
-            "Suivi des équipements liés à la sécurité",
-            "Documentation technique",
-            "Amélioration des procédures internes",
-            "Accompagnement des utilisateurs sur les outils numériques",
+            "Création et gestion des comptes utilisateurs dans Active Directory et des messageries professionnelles",
+            "Gestion des accès et des permissions via Active Directory",
           ],
         },
       ],
-
-      tools: [
-        "Windows Server",
-        "Active Directory",
-        "Microsoft 365",
-        "DNS",
-        "DHCP",
-        "GPO",
-        "UniFi",
-        "Odoo",
-        "Windows",
-      ],
+      tools: ["Windows", "Active Directory", "Microsoft 365"],
     },
-
     {
       company: "NETBFRS",
-      role: "Technicienne Informatique — Stage",
+      role: "Stage — Infrastructure réseau et câblage",
       location: "Marseille",
-      date: "Décembre 2025 - Février 2026",
+      date: "Décembre 2024 - Février 2025",
       description:
-        "Stage orienté infrastructure réseau et maintenance informatique, avec des interventions sur le câblage, les équipements Wi-Fi, Active Directory et le diagnostic matériel.",
-
+        "Stage consacré à la découverte des interventions sur chantier et à la participation aux travaux de câblage des réseaux informatiques.",
       missions: [
         {
           icon: Network,
-          title: "Infrastructure Réseau",
+          title: "Infrastructure réseau & câblage",
           details: [
-            "Participation au montage de baies de brassage",
-            "Raccordement de câbles Ethernet",
-            "Organisation et suivi des équipements réseau",
-            "Installation et configuration de points d’accès Wi-Fi",
-          ],
-        },
-
-        {
-          icon: Users,
-          title: "Administration Système",
-          details: [
-            "Maintenance d’Active Directory",
-            "Intervention sur les environnements Windows",
-            "Vérification et maintenance des postes informatiques",
-          ],
-        },
-
-        {
-          icon: Wrench,
-          title: "Maintenance Matérielle",
-          details: [
-            "Diagnostic de pannes sur ordinateurs",
-            "Diagnostic de problèmes sur appareils mobiles",
-            "Remplacement de composants matériels",
-            "Résolution de problèmes techniques",
-            "Maintenance préventive et corrective du matériel",
+            "Participation aux interventions sur chantier pour l’installation de réseaux informatiques",
+            "Tirage et passage de câbles Ethernet",
+            "Assistance au raccordement et au branchement des câbles réseau",
           ],
         },
       ],
-
-      tools: [
-        "Active Directory",
-        "Windows",
-        "Ethernet",
-        "Wi-Fi",
-        "Réseau",
-        "Hardware",
-      ],
-    },
-
-    {
-      company: "IT Consulting Marseille",
-      role: "Stage de découverte — Administration Systèmes et Réseaux",
-      location: "Marseille",
-      date: "Mars 2024 - Avril 2024",
-      description:
-        "Première immersion professionnelle dans l’administration systèmes et réseaux, avec des missions de maintenance, de préparation de postes et de déploiement logiciel.",
-
-      missions: [
-        {
-          icon: Wrench,
-          title: "Maintenance Informatique",
-          details: [
-            "Assistance à la maintenance du matériel informatique",
-            "Participation au diagnostic de problèmes techniques",
-            "Vérification du bon fonctionnement des équipements",
-          ],
-        },
-
-        {
-          icon: Users,
-          title: "Préparation des Postes",
-          details: [
-            "Participation à la configuration des postes informatiques",
-            "Installation de logiciels",
-            "Déploiement de mises à jour",
-            "Préparation des environnements utilisateurs",
-          ],
-        },
-
-        {
-          icon: Server,
-          title: "Sauvegarde et Administration",
-          details: [
-            "Découverte des procédures de sauvegarde",
-            "Observation des pratiques d’administration systèmes",
-            "Découverte du fonctionnement d’une infrastructure informatique professionnelle",
-          ],
-        },
-      ],
-
-      tools: [
-        "Windows",
-        "Maintenance",
-        "Déploiement logiciel",
-        "Mises à jour",
-        "Sauvegarde",
-      ],
+      tools: ["Câblage Ethernet", "Infrastructure réseau", "Interventions sur chantier"],
     },
   ];
 
@@ -278,27 +151,57 @@ const Experiences = () => {
   return (
     <section
       id="experiences"
-      className="py-20 bg-gradient-to-b from-gray-800 to-gray-900"
+      className="py-20 bg-gradient-to-b from-[#1e293b] to-[#111827]"
     >
       <div className="container mx-auto px-6">
 
-        {/* TITRE */}
-        <div className="text-center mb-16">
+        {/* EN-TÊTE — cohérent avec la section Mes projets techniques */}
+        <div className="mb-12 overflow-hidden rounded-[28px] border border-purple-500/20 bg-gradient-to-br from-[#0c142a] via-[#101827] to-[#191630] p-7 md:p-10 lg:p-12 shadow-2xl shadow-purple-950/10">
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+            <div>
+              <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-medium text-purple-200">
+                <Briefcase size={15} /> Mon parcours professionnel
+              </span>
+              <h2 className="mb-5 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+                Mes expériences<br />
+                <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  professionnelles
+                </span>
+              </h2>
+              <p className="max-w-xl text-base leading-relaxed text-slate-300 md:text-lg">
+                Du support aux utilisateurs à l’administration des comptes, en passant par les interventions sur chantier et le câblage réseau : découvrez mes expériences sur le terrain.
+              </p>
+            </div>
 
-          <span className="inline-block px-4 py-2 mb-4 text-sm font-medium text-purple-300 bg-purple-500/10 border border-purple-500/20 rounded-full">
-            Mon parcours professionnel
-          </span>
+            {/* Illustration technique, sans image externe */}
+            <div aria-hidden="true" className="relative mx-auto flex h-64 w-full max-w-md items-center justify-center sm:h-72">
+              <div className="absolute inset-x-[12%] top-1/2 border-t border-dashed border-purple-400/40" />
+              <div className="absolute inset-y-[12%] left-1/2 border-l border-dashed border-purple-400/40" />
+              <div className="absolute left-[7%] top-[12%] rounded-2xl border border-blue-400/30 bg-blue-500/10 p-4 text-blue-300 shadow-lg shadow-blue-950/30"><Headset size={30} /></div>
+              <div className="absolute right-[8%] top-[12%] rounded-2xl border border-purple-400/30 bg-purple-500/10 p-4 text-purple-300 shadow-lg shadow-purple-950/30"><Users size={30} /></div>
+              <div className="absolute bottom-[10%] left-[9%] rounded-2xl border border-purple-400/30 bg-purple-500/10 p-4 text-purple-300"><Cable size={30} /></div>
+              <div className="absolute bottom-[10%] right-[10%] rounded-2xl border border-blue-400/30 bg-blue-500/10 p-4 text-blue-300"><Monitor size={30} /></div>
+              <div className="relative z-10 flex h-32 w-36 flex-col items-center justify-center gap-2 rounded-2xl border border-purple-400/40 bg-[#111a35] text-purple-200 shadow-2xl shadow-purple-900/30">
+                <Server size={40} />
+                <span className="text-xs font-semibold text-white">Informatique</span>
+              </div>
+            </div>
+          </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-5">
-            Expériences professionnelles
-          </h2>
-
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Découvrez les expériences qui m’ont permis de développer mes
-            compétences en support informatique, systèmes, réseaux et
-            maintenance.
-          </p>
-
+          <div className="mt-10 grid gap-3 sm:grid-cols-3">
+            <div className="flex items-center gap-3 rounded-xl border border-blue-400/20 bg-white/[0.035] px-4 py-4">
+              <Headset size={22} className="shrink-0 text-blue-400" />
+              <span className="font-medium text-white">Support IT</span>
+            </div>
+            <div className="flex items-center gap-3 rounded-xl border border-purple-400/20 bg-white/[0.035] px-4 py-4">
+              <FolderCog size={22} className="shrink-0 text-purple-400" />
+              <span className="font-medium text-white">Administration</span>
+            </div>
+            <div className="flex items-center gap-3 rounded-xl border border-purple-400/20 bg-white/[0.035] px-4 py-4">
+              <Network size={22} className="shrink-0 text-purple-400" />
+              <span className="font-medium text-white">Réseau & câblage</span>
+            </div>
+          </div>
         </div>
 
         {/* EXPERIENCES */}
@@ -310,7 +213,7 @@ const Experiences = () => {
             return (
               <div
                 key={index}
-                className="bg-gradient-to-br from-gray-800/60 to-gray-900/70 backdrop-blur-sm border border-purple-500/20 rounded-2xl overflow-hidden hover:border-purple-500/40 transition-all duration-300"
+                className="bg-gradient-to-br from-[#1b2434] to-[#172033] backdrop-blur-sm border border-purple-500/20 rounded-2xl overflow-hidden hover:border-purple-400/30 transition-all duration-300"
               >
 
                 <button
@@ -322,7 +225,7 @@ const Experiences = () => {
 
                     <div className="flex items-start gap-4">
 
-                      <div className="bg-gradient-to-br from-purple-600 to-purple-700 p-3 rounded-xl flex-shrink-0">
+                      <div className="bg-gradient-to-br from-purple-600 to-[#6d28d9] p-3 rounded-xl flex-shrink-0">
                         <Building2
                           className="text-white"
                           size={26}
@@ -331,7 +234,7 @@ const Experiences = () => {
 
                       <div>
 
-                        <h3 className="text-2xl md:text-3xl text-purple-400 font-bold mb-2">
+                        <h3 className="text-2xl md:text-3xl text-white font-bold mb-2">
                           {experience.company}
                         </h3>
 
@@ -414,11 +317,11 @@ const Experiences = () => {
                             return (
                               <div
                                 key={missionIndex}
-                                className="group bg-gray-900/40 border border-purple-500/20 rounded-xl p-6 hover:border-purple-500/40 transition-all duration-300"
+                                className="group bg-[#151e30]/80 border border-purple-500/20 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-300"
                               >
                                 <div className="flex items-start gap-4">
 
-                                  <div className="bg-gradient-to-br from-purple-600 to-purple-700 p-3 rounded-lg flex-shrink-0">
+                                  <div className="bg-gradient-to-br from-purple-600 to-[#6d28d9] p-3 rounded-lg flex-shrink-0">
                                     <MissionIcon
                                       className="text-white"
                                       size={24}
